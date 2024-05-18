@@ -25,7 +25,7 @@ def get_hairs():
     return render_template("hairs.html", hairs=hairs)
 
 
-@app.root("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["GET", "POST"])
 def register():
     return render_template("register.html")
 
