@@ -25,6 +25,14 @@ def get_hairs():
     return render_template("hairs.html", hairs=hairs)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    hairs = list(mongo.db.houseplants.find(
+                        {"$text": {"$search": query}}))
+    return render_template("hairs.html", hairs=hairs)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
