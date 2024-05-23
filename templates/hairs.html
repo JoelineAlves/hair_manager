@@ -25,6 +25,8 @@
     </form>
   </div>
 
+  {% if tasks|length > 0 %}
+
 
     {% for hair in hairs %}
         {{ hair.category_name }}<br>
@@ -34,6 +36,10 @@
         {{ hair.description }}<br>
         {{ hair.date }}<br>
     {% endfor %}
+    
+  {% else %}
+        <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+  {% endif %}  
 
 {% endblock %}    
 
