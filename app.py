@@ -107,9 +107,24 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_hairstyle")
+@app.route("/add_hairstyle", methods=["GET", "POST"])
 def add_hairstyle():
-    return render_template("add_hairstyle.html")
+    if request.method == "POST":
+        hair = {
+            "category_name": request.form.get("category_name"),
+            "hair_name": request.form.get("hair_name"),
+            "common_name": request.form.get("common_name"),
+            "description": request.form.get("description"),
+            "date": request.form.get("date"),
+            "created_by": session["user"]
+        }
+        mongo.db.hairs.insert_one(hair)
+        flash("Hairstyle Successfully Added")
+        return redirect(url_for("get_hairs"))
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_hairstyle.html", categories=categories)
+
 
 
 if __name__ == "__main__":
