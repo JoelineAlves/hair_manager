@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_hairs")
 def get_hairs():
-    hairs = mongo.db.hairs.find()
+    hairs = list(mongo.db.hairs.find())
     return render_template("hairs.html", hairs=hairs)
 
 
