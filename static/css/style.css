@@ -5,3 +5,14 @@
 .flashes h4 {
     line-height: 2;
 }
+
+/* card styles */
+.card .card-image img {
+    object-fit: cover;
+    height: 40vh;
+}
+
+.btn-small {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
