@@ -125,6 +125,8 @@ def add_hairstyle():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_hairstyle.html", categories=categories)
 
+    
+
 
 
 if __name__ == "__main__":
