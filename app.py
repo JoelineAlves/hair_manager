@@ -94,9 +94,9 @@ def profile(username):
         # find the session["user"] record
         user = mongo.db.users.find_one({"username": username})
         # grab only the houseplants by this session["user"]
-        houseplants = list(mongo.db.houseplants.find({"created_by": username}))
+        hairs = list(mongo.db.hairs.find({"created_by": username}))
         return render_template(
-                "profile.html", user=user, houseplants=houseplants)
+                "profile.html", user=user, hairs=hairs)
 
 
 @app.route("/logout")
@@ -114,7 +114,9 @@ def add_hairstyle():
             "category_name": request.form.get("category_name"),
             "hair_name": request.form.get("hair_name"),
             "common_name": request.form.get("common_name"),
+            "image_url": request.form.get("image_url"),
             "description": request.form.get("description"),
+            "hair_care": request.form.get("hair_care"),
             "date": request.form.get("date"),
             "created_by": session["user"]
         }
@@ -123,7 +125,39 @@ def add_hairstyle():
         return redirect(url_for("get_hairs"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_hairstyle.html", categories=categories)   
+    return render_template("add_hairstyle.html", categories=categories)
+
+
+@app.route("/edit_hairstyle/<hair_id>", methods=["GET", "POST"])
+def edit_hairstyle(hair_id):
+    # find the hairstyle
+    hairs = mongo.db.hairs.find_one(
+        {"_id": ObjectId(hair_id)})
+    if session["user"].lower() == hairs["created_by"].lower():
+        # the session["user"] must be the user who created this houseplant
+        if request.method == "POST":
+            submit = {
+                "category_name": request.form.get("category_name"),
+                "hair_name": request.form.get("hair_name"),
+                "common_name": request.form.get("common_name"),
+                "image_url": request.form.get("image_url"),
+                "description": request.form.get("description"),
+                "hair_care": request.form.get("hair_care"),
+                "date": request.form.get("date"),
+                "created_by": session["user"]
+            }
+            mongo.db.hairs.replace_one(
+                                {"_id": ObjectId(hair_id)}, submit)
+            flash("Hairstyle Successfully Updated")
+
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template(
+                            "edit_hairstyle.html", hairs=hairs,
+                            categories=categories)
+
+    # not the correct user to edit this houseplant
+    flash("You don't have access to edit this hairstyle")
+    return redirect(url_for("hairs.html"))       
 
 
 
