@@ -127,37 +127,7 @@ def add_hairstyle():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_hairstyle.html", categories=categories)
 
-
-@app.route("/edit_hairstyle/<hair_id>", methods=["GET", "POST"])
-def edit_hairstyle(hair_id):
-    # find the hairstyle
-    hair = mongo.db.hairs.find_one(
-        {"_id": ObjectId(hair_id)})
-    if session["user"].lower() == hairs["created_by"].lower():
-        # the session["user"] must be the user who created this houseplant
-        if request.method == "POST":
-            submit = {
-                "category_name": request.form.get("category_name"),
-                "hair_name": request.form.get("hair_name"),
-                "common_name": request.form.get("common_name"),
-                "image_url": request.form.get("image_url"),
-                "description": request.form.get("description"),
-                "hair_care": request.form.get("hair_care"),
-                "date": request.form.get("date"),
-                "created_by": session["user"]
-            }
-            mongo.db.hairs.replace_one(
-                                {"_id": ObjectId(hair_id)}, submit)
-            flash("Hairstyle Successfully Updated")
-
-        categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template(
-                            "edit_hairstyle.html", hair=hair,
-                            categories=categories)
-
-    # not the correct user to edit this houseplant
-    flash("You don't have access to edit this hairstyle")
-    return redirect(url_for("hairs.html"))       
+      
 
 
 
