@@ -147,7 +147,7 @@ def edit_hairstyle(hair_id):
 
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template(
-                            "edit_hairstyle.html", hair=hair,
+                            "edit_hairstyle.html", hairs=hairs,
                             categories=categories)     
 
 
