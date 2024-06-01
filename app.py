@@ -128,7 +128,7 @@ def add_hairstyle():
     return render_template("add_hairstyle.html", categories=categories)
 
 
-@app.route("/edit_hairsyule/<hair_id>", methods=["GET", "POST"])
+@app.route("/edit_hairstyle/<hair_id>", methods=["GET", "POST"])
 def edit_hairstyle(hair_id):
         if request.method == "POST":
             submit = {
@@ -145,9 +145,10 @@ def edit_hairstyle(hair_id):
                                 {"_id": ObjectId(hair_id)}, submit)
             flash("Hairstyle Successfully Updated")
 
+        hair = mongo.db.hairs.find_one({"_id": ObjectId(hair_id)})
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template(
-                            "edit_hairstyle.html", hairs=hairs,
+                            "edit_hairstyle.html", hair=hair,
                             categories=categories)     
 
 
