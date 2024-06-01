@@ -141,7 +141,7 @@ def edit_hairstyle(hair_id):
                 "date": request.form.get("date"),
                 "created_by": session["user"]
             }
-            mongo.db.hairs.update(
+            mongo.db.hairs.replace_one(
                                 {"_id": ObjectId(hair_id)}, submit)
             flash("Hairstyle Successfully Updated")
 
