@@ -131,7 +131,7 @@ def add_hairstyle():
 @app.route("/edit_hairstyle/<hair_id>", methods=["GET", "POST"])
 def edit_hairstyle(hair_id):
     # find the hairstyle
-    hairs = mongo.db.hairs.find_one(
+    hair = mongo.db.hairs.find_one(
         {"_id": ObjectId(hair_id)})
     if session["user"].lower() == hairs["created_by"].lower():
         # the session["user"] must be the user who created this houseplant
@@ -152,7 +152,7 @@ def edit_hairstyle(hair_id):
 
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template(
-                            "edit_hairstyle.html", hairs=hairs,
+                            "edit_hairstyle.html", hair=hair,
                             categories=categories)
 
     # not the correct user to edit this houseplant
