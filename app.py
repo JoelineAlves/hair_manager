@@ -125,7 +125,11 @@ def add_hairstyle():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_hairstyle.html", categories=categories)
 
-    
+@app.route("/edit_hairstyle/<hair_id>", methods=["GET", "POST"])
+def edit_hairstyle(hair_id):
+    hair = mongo.db.hairs.find_one({"_id": ObjectId(hair_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_hairstyle.html", hair=hair, categories=categories)    
 
 
 
