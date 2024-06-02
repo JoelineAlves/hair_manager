@@ -149,7 +149,14 @@ def edit_hairstyle(hair_id):
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template(
                             "edit_hairstyle.html", hair=hair,
-                            categories=categories)     
+                            categories=categories)   
+
+
+@app.route("/delete_hairstyle/<hair_id>")
+def delete_hairstyle(hair_id):
+    mongo.db.hairs.remove({"_id": ObjectId(hair_id)})
+    flash("Hairstyle Successfully Deleted")
+    return redirect(url_for("get_hairs"))                              
 
 
 
