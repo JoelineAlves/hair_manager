@@ -154,7 +154,7 @@ def edit_hairstyle(hair_id):
 
 @app.route("/delete_hairstyle/<hair_id>")
 def delete_hairstyle(hair_id):
-    mongo.db.hairs.remove({"_id": ObjectId(hair_id)})
+    mongo.db.hairs.delete_one({"_id": ObjectId(hair_id)})
     flash("Hairstyle Successfully Deleted")
     return redirect(url_for("get_hairs"))                              
 
