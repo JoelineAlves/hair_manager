@@ -21,12 +21,17 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_hairs")
 def get_hairs():
+    """ Function get_hairs Connects to hair collection in MongoDB and gets all records
+and returns it to the hairs.html HTML template"""
     hairs = list(mongo.db.hairs.find())
     return render_template("hairs.html", hairs=hairs)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """ Function search Receive a search query from a form submitted via POST,
+     perform a textual search on the MongoDB hair collection using and render the hairs.html 
+     template with the search results"""
     query = request.form.get("query")
     hairs = list(mongo.db.hairs.find(
                         {"$text": {"$search": query}}))
@@ -35,12 +40,15 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    """metothod register user more description"""
+    """ Function register
+    Register new users if the user does not already exist in the database.
+    After registration, the user must be redirected to their profile.
+    If request method is POST and registration is successful, redirects to user profile
+    If the request method is GET, renders the register.html template """
     if request.method == "POST":
         # check if username already exists in db
         user_exist = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
         if user_exist:
             flash("Username already exists")
             return redirect(url_for("register"))
@@ -61,6 +69,10 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """ Handles user login
+    Login function Authentication with name and password if authentication is successful,
+    adds the username to the session cookie and redirects the user to their profile, otherwise it displays
+    an error message and redirects back to the login page. """
     if request.method == "POST":
         # check if username exists in db
         user_exist = mongo.db.users.find_one(
@@ -90,6 +102,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """ Function profile Displays user profile and associated data"""
     # grab only the session["user"] profile
     if session["user"].lower() == username.lower():
         # find the session["user"] record
@@ -102,6 +115,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    """ Logs out the current user """
     # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
@@ -110,6 +124,7 @@ def logout():
 
 @app.route("/add_hairstyle", methods=["GET", "POST"])
 def add_hairstyle():
+    """ Function add_hairstyle Handles adding a new hairstyle to the database """
     if request.method == "POST":
         hair = {
             "category_name": request.form.get("category_name"),
@@ -155,6 +170,7 @@ def edit_hairstyle(hair_id):
 
 @app.route("/delete_hairstyle/<hair_id>")
 def delete_hairstyle(hair_id):
+    """Handles deleting a hairstyle from the database."""
     mongo.db.hairs.delete_one({"_id": ObjectId(hair_id)})
     flash("Hairstyle Successfully Deleted")
     return redirect(url_for("get_hairs")) 
@@ -162,12 +178,14 @@ def delete_hairstyle(hair_id):
 
 @app.route("/get_categories")
 def get_categories():
+    """Retrieves and displays all categories."""
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    """Handles adding a new category."""
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -181,6 +199,7 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    """Handles editing an existing category."""
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
@@ -195,6 +214,7 @@ def edit_category(category_id):
 
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
+    """Handles deleting a category from the database."""
     mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))                                          
