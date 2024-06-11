@@ -35,6 +35,7 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """metothod register user more description"""
     if request.method == "POST":
         # check if username already exists in db
         user_exist = mongo.db.users.find_one(
