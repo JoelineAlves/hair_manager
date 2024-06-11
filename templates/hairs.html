@@ -46,7 +46,7 @@
             </div>
             <div class=" grey lighten-4 center">
               {% if hair.created_by|lower == session.user|lower %}
-               <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" class="btn-small red accent-3">Delete <i class="fa fa-trash"></i></a>
+               <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" onclick="confirmDeletion('{{ hair._id }}')" class="btn-small red accent-3">Delete <i class="fa fa-trash"></i></a>
                <a href="{{ url_for('edit_hairstyle', hair_id=hair._id) }}" class="btn-small teal darken-4">Edit <i class="fas fa-edit"></i></a>
               {% endif %}
              </div>
@@ -87,6 +87,12 @@
 {% block scripts %}
 <script>
   $("#year").text(new Date().getFullYear());
+  
+  function confirmDeletion(hairId) {
+        if (confirm("Are you sure you want to delete this hairstyle?")) {
+            window.location.href = "/delete_hairstyle/" + hairId;
+        }
+    }
 </script>
 {% endblock %}
 
