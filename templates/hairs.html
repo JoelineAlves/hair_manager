@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<!-- Headings -->
 <div class="row center">
     <h3 class="center-align teal-text text-darken-4">For hairstyle lovers</h3>
     <h5>Join us to find out more about Hairstyle</h5>
   </div>
-
+   
+  <!-- Search Session -->
   <div class="row card-panel grey lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
       <div class="row valign-wrapper center-align">
@@ -24,7 +25,7 @@
       </div>
     </form>
   </div>
-
+  <!-- Cards -->
   {% if hairs|length > 0 %}
   <div class="row" data-aos="fade-up" data-aos-offset="200">
       {% for hair in hairs %}
@@ -44,6 +45,7 @@
               <small class=" teal-text text-darken-4">Added by: {{ hair.created_by }}, {{ hair.date }}</small>
               <br>
             </div>
+            <!-- Cards created by the user with edit and delete option -->
             <div class=" grey lighten-4 center">
               {% if hair.created_by|lower == session.user|lower %}
                <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" onclick="confirmDeletion('{{ hair._id }}')" class="btn-small red accent-3">Delete <i class="fa fa-trash"></i></a>
@@ -66,6 +68,7 @@
               </div>
           </div>
       </div>
+      <!-- End of Cards -->
       {% endfor %}
   </div>
   {% else %}
@@ -79,7 +82,8 @@
       <p class="black-text">Copyright &copy; Hairstyle <span id="year"></span></p>
       </div>
     </div>
-  </footer> 
+  </footer>
+  <!-- End of footer --> 
 
 {% endblock %} 
 
