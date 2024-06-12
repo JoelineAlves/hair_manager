@@ -5,97 +5,72 @@
 <div class="row center">
     <h3 class="center-align teal-text text-darken-4">For hairstyle lovers</h3>
     <h5>Join us to find out more about Hairstyle</h5>
-  </div>
-   
-  <!-- Search Session -->
-  <div class="row card-panel grey lighten-5">
+</div>
+
+<!-- Search Session -->
+<div class="row card-panel grey lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
-      <div class="row valign-wrapper center-align">
-        <div class="input-field col s12 m8">
-          <i class="fas fa-search prefix green-text text-darken-4"></i>
-              <input type="text" name="query" id="query" minlength="3" class="validate" required>
-              <label for ="query">Search Hairstyle</label>
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12 m8">
+                <i class="fas fa-search prefix green-text text-darken-4"></i>
+                <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                <label for="query">Search Hairstyle</label>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{ url_for('get_hairs') }}" class="red accent-3 btn text-shadow">Reset <i class="fas fa-refresh"></i></a>
+                <button type="submit" class="green darken-4 btn text-shadow">
+                    <i class="fas fa-search right"></i>Search
+                </button>
+            </div>
         </div>
-        <div class="col s12 m4">
-            <a href="{{ url_for('get_hairs') }}" class="red accent-3 btn text-shadow">Reset <i class="fas fa-refresh"></i></a>
-            <button type="submit" class="green darken-4 btn text-shadow">
-            <i class="fas fa-search right"></i>Search
-            </button>
-        </div>
-      </div>
     </form>
-  </div>
-  <!-- Cards -->
-  {% if hairs|length > 0 %}
-  <div class="row" data-aos="fade-up" data-aos-offset="200">
-      {% for hair in hairs %}
-      <div class="col s12 l3 m6">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="{{ hair.image_url }}" alt="{{ hair.hair_name }}">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator center teal-text text-darken-4"><strong>{{ hair.hair_name }}</strong></span>
-              <span class="card-title activator center">{{ hair.common_name }}<br></span>
-              <p class="activator teal-text text-darken-4 center">{{ hair.description }}</p>
-              <br>
-              <small class=" teal-text text-darken-4"><strong>Category: {{ hair.category_name }}</strong></small>
-              <br>
-              <span class="card-title activator right teal-text  text-darken-4 center"><i class="fas fa-magnifying-glass-plus"></i><br></span>
-              <small class=" teal-text text-darken-4">Added by: {{ hair.created_by }}, {{ hair.date }}</small>
-              <br>
-            </div>
-            <!-- Cards created by the user with edit and delete option -->
-            <div class=" grey lighten-4 center">
-              {% if hair.created_by|lower == session.user|lower %}
-               <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" onclick="confirmDeletion('{{ hair._id }}')" class="btn-small red accent-3">Delete <i class="fa fa-trash"></i></a>
-               <a href="{{ url_for('edit_hairstyle', hair_id=hair._id) }}" class="btn-small teal darken-4">Edit <i class="fas fa-edit"></i></a>
-              {% endif %}
-             </div>
-            <div class="card-reveal teal accent-1">
-              <span class="card-title "><strong>Hair care:</strong><i class="fa-solid fa-xmark right"></i></span>
-              <div class="center-align">
-              <br>
-              <img src="{{ url_for('static', filename='avatars/care4plants.png') }}" alt="watering plants icon" width="100" height="100">
-              <span class="card-title teal-text text-darken-4"><strong>{{ hair.common_name }}</strong></span>
-              <span class="card-title teal-text text-darken-4">How do I keep it stylish?</span>
-              <p class="teal-text text-darken-4">{{ hair.hair_care }}</p>
-              <br>
-              <br>
-              <p>For some great advice on hair care, why not have a look at these videos we have made for you?</p>
-              <a href="https://www.youtube.com/results?search_query=houseplants" class="btn-large red accent-3" target="_blank" rel="noopener" aria-label="YouTube link"><i class="fab fa-youtube"></i></a>
-            </div>
-              </div>
-          </div>
-      </div>
-      <!-- End of Cards -->
-      {% endfor %}
-  </div>
-  {% else %}
-  <h4 class="red-text text-red accent-3 center-align">No results found!</h4>
-  {% endif %}
+</div>
 
-   <!-- footer -->
-  <footer>
+<!-- List -->
+{% if hairs|length > 0 %}
+<ul class="collection">
+    {% for hair in hairs %}
+    <li class="collection-item avatar">
+        <img src="{{ hair.image_url }}" alt="{{ hair.hair_name }}" class="circle">
+        <span class="title"><strong>{{ hair.hair_name }}</strong></span>
+        <p>{{ hair.description }}</p>
+        <p class="teal-text text-darken-4"><strong>Category: {{ hair.category_name }}</strong></p>
+        <p>Added by: {{ hair.created_by }}, {{ hair.date }}</p>
+        {% if hair.created_by|lower == session.user|lower %}
+        <div class="right">
+            <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" onclick="confirmDeletion('{{ hair._id }}')" class="btn-small red accent-3">Delete <i class="fa fa-trash"></i></a>
+            <a href="{{ url_for('edit_hairstyle', hair_id=hair._id) }}" class="btn-small teal darken-4">Edit <i class="fas fa-edit"></i></a>
+        </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<h4 class="red-text text-red accent-3 center-align">No results found!</h4>
+{% endif %}
+
+<!-- footer -->
+<footer>
     <div class="footer-copyright center">
-      <div class="container">
-      <p class="black-text">Copyright &copy; Hairstyle <span id="year"></span></p>
-      </div>
+        <div class="container">
+            <p class="black-text">Copyright &copy; Hairstyle <span id="year"></span></p>
+        </div>
     </div>
-  </footer>
-  <!-- End of footer --> 
+</footer>
+<!-- End of footer -->
 
-{% endblock %} 
+{% endblock %}
 
 {% block scripts %}
 <script>
-  $("#year").text(new Date().getFullYear());
+    $("#year").text(new Date().getFullYear());
 
-  function confirmDeletion(hairId) {
+    function confirmDeletion(hairId) {
         if (confirm("Are you sure you want to delete this hairstyle?")) {
             window.location.href = "/delete_hairstyle/" + hairId;
         }
     }
 </script>
 {% endblock %}
+
 
