@@ -35,11 +35,26 @@
         <span class="title"><strong>{{ hair.hair_name }}</strong></span>
         <p><strong>Common Name:</strong> {{ hair.common_name }}</p>
         <p>{{ hair.description }}</p>
-        <p><strong>Hair Care:</strong> {{ hair.hair_care }}</p>
         <p class="teal-text text-darken-4"><strong>Category:</strong> {{ hair.category_name }}</p>
-        <p><small>Added by: {{ hair.created_by }}, {{ hair.date }}</small></p>
+        <p>Added by: {{ hair.created_by }}, {{ hair.date }}</p>
+        
+        <!-- Reveal button -->
+        <a href="#!" class="secondary-content" onclick="toggleDetails('{{ hair._id }}')">
+            <i class="fas fa-magnifying-glass-plus"></i>
+        </a>
+
+        <!-- Revealed content -->
+        <div id="details-{{ hair._id }}" class="reveal-content" style="display:none;">
+            <p><strong>Hair Care:</strong> {{ hair.hair_care }}</p>
+            <p>For some great advice on hair care, why not have a look at these videos we have made for you?</p>
+            <a href="https://www.youtube.com/results?search_query=houseplants" class="btn-large red accent-3" target="_blank" rel="noopener" aria-label="YouTube link">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+
+        <!-- Edit and Delete buttons -->
         {% if hair.created_by|lower == session.user|lower %}
-        <div class="secondary-content">
+        <div class="right">
             <a href="{{ url_for('edit_hairstyle', hair_id=hair._id) }}" class="btn-small teal darken-4">Edit <i class="fas fa-edit"></i></a>
             <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" onclick="confirmDeletion('{{ hair._id }}')" class="btn-small red accent-3">Delete <i class="fa fa-trash"></i></a>
         </div>
@@ -72,8 +87,18 @@
             window.location.href = "/delete_hairstyle/" + hairId;
         }
     }
+
+    function toggleDetails(id) {
+        var details = document.getElementById('details-' + id);
+        if (details.style.display === 'none') {
+            details.style.display = 'block';
+        } else {
+            details.style.display = 'none';
+        }
+    }
 </script>
 {% endblock %}
+
 
 
 
