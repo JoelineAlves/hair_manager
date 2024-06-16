@@ -1,4 +1,4 @@
-# Happy Camper Campsite Review Website - Emma Scott
+# Hair Styles Review Website - Joeline Alves
 ## Backend Development Milestone Project
 
 ![mockup image](/documentation/mockup.jpg)
@@ -424,9 +424,14 @@ Photo by Xue Guangjian: https://www.pexels.com/photo/photo-of-pitched-dome-tents
 
 ### Acknowledgements
 
-* Thank you to my mentor, Marcel, for helpful feedback, industry insights and recommended tools.
-* Thank you to my friends and family for frequent testing and interrogation of their opinions.
-* Thank you to the tutors and staff at Code Institute for their support.
+
+* My Brother, for him unconditional love, help and support in all aspects of life to make possible for me to work on this project.
+* My family, for their valuable opinions and and critic during the design and development process.
+* My mentor, Marcel, for their invaluable feedback and guidance.
+* My Tutor, Rachel, for the all help and support.
+* My friend Dorivaldo, for the all help and support.
+* Codeanywhere support, to help resolve issues encountered.
+* Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
 [Back to top](#table-of-contents)
 ___

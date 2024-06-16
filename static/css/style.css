@@ -1,18 +1,127 @@
+/* Reset global margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Specific adjustments */
+body {
+    background-color: #212121d8;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container adjustments */
+.container {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Flexbox layout for rows and columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;  /* Remove default margin */
+}
+
+.col {
+    padding: 10px;  /* Adjust padding to create space between cards */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@media (min-width: 601px) {
+    .col.s12.m6 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 993px) {
+    .col.s12.l3 {
+        width: 25%;
+    }
+}
+
+.card {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-image img {
+    object-fit: cover;
+    height: 200px;  /* Adjust height as needed */
+    width: 100%;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+/* Adjust button margins */
+.btn-small {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-large i.fab {
+    font-size: 1rem;  /* Reduce the icon size */
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+
+
 .flashes h4 {
     line-height: 2;
+    
 }
 
-/* card styles */
-.card .card-image img {
-    object-fit: cover;
-    height: 40vh;
+/* Title and search adjustments */
+.center-align {
+    text-align: center;
 }
 
-.btn-small {
-    margin-top: 15px;
-    margin-bottom: 15px;
+.headings {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.search-session {
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.input-field {
+    margin-bottom: 0;
+}
+
+/* mobile navbar */
+#mobile-demo {
+    background-color: #000; 
+}
+
+#mobile-demo a {
+    color: #ffffff; 
+}
+
+
+
+
+
+  
+  
+
+
+

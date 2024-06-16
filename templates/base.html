@@ -15,7 +15,7 @@
 
     <header>
         <!-- My Navbar -->
-        <nav class="nav-extended text-shadow teal darken-3">
+        <nav class="nav-extended text-shadow brown darken-1">
             <div class="nav-wrapper">
               <a href="{{ url_for('get_hairs') }}" class="brand-logo">Hair Styles</a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -38,7 +38,7 @@
         
         <!-- Mobile Navbar -->  
           <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align teal-text text-darken-3">Hair Styles</h4></li>
+            <li><h4 class="center-align white-text">Hair Styles</h4></li>
             <li><a href="{{ url_for('get_hairs') }}">Home</a></li>
         {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
@@ -60,7 +60,7 @@
      {% if messages %}
          {% for message in messages %}
              <div class="row flashes">
-                 <h4 class="grey lighten-5 center-align">{{ message }}</h4>
+                 <h4 class=" brown lighten-1 white-text center-align">{{ message }}</h4>
              </div>
          {% endfor %}
      {% endif %}

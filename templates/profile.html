@@ -4,13 +4,13 @@
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
-                <h3 class="center-align teal-text text-darken-4">
+                <h3 class="center-align black-text">
                     {{ user.username }}'s Profile
                 </h3>
                 <br>
                 <br>
-                <button data-target="modal1" class="btn-large teal accent-1 teal-text text-darken-4 modal-trigger"><strong>My HairStyle </strong><i class="fas fa-face-grin prefix teal-text text-darken-4"></i></button>
-                <a href="{{ url_for('add_hairstyle') }}" class="btn-large teal darken-4">Add hairstyle <i class="fas fa-plus-square right"></i></a>
+                <button data-target="modal1" class="btn-large brown darken-1 accent-1 white-text modal-trigger"><strong>My HairStyle </strong><i class="fas fa-face-grin prefix white-text"></i></button>
+                <a href="{{ url_for('add_hairstyle') }}" class="btn-large brown darken-4">Add hairstyle <i class="fas fa-plus-square right"></i></a>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
     <!-- Modal Structure -->
   <div id="modal1" class="modal bottom-sheet">
     <div class="modal-content">
-      <h3 class="center-align teal-text text-darken-4">{{ user.username }}'s hairstyle</h3>
+      <h3 class="center-align black-text">{{ user.username }}'s hairstyle</h3>
       {% if hairs|length > 0 %}
         <div class="row" data-aos="fade-up" data-aos-offset="200">
             {% for hair in hairs %}
@@ -28,34 +28,34 @@
                     <img class="activator" src="{{ hair.image_url }}" alt="{{ hair.hair_name }}">
                   </div>
                   <div class="card-content">
-                    <span class="card-title activator center green-text text-darken-4"><strong>{{ hair.hair_name }}</strong></span>
-                    <span class="card-title activator center">{{ hair.common_name }}<br></span>
-                    <p class="activator teal-text text-darken-4 center">{{ hair.description }}</p>
+                    <span class="card-title activator center brown-text text-darken-4"><strong>{{ hair.hair_name }}</strong></span>
+                    <span class="card-title activator center brown-text text-darken-1">{{ hair.common_name }}<br></span>
+                    <p class="activator brown-text text-darken-1 center">{{ hair.description }}</p>
                     <br>
-                    <small class=" teal-text text-darken-4"><strong>Category: {{ hair.category_name }}</strong></small>
+                    <small class=" brown-text text-darken-4"><strong>Category: {{ hair.category_name }}</strong></small>
                     <br>
-                    <span class="card-title activator right green-text  text-darken-4 center"><i class="fas fa-magnifying-glass-plus"></i><br></span>
-                    <small class=" teal-text text-darken-4">Added by: {{ hair.created_by }}, {{ hair.date }}</small>
+                    <span class="card-title activator right brown-text text-darken-4"><i class="fas fa-magnifying-glass-plus"></i><br></span>
+                    <small class=" brown-text text-darken-4">Added by: {{ hair.created_by }}, {{ hair.date }}</small>
                     <br>
                   </div>
                   <div class=" grey lighten-4 center">
                    {% if hair.created_by|lower == session.user|lower %}
-                    <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" onclick="confirmDeletion('{{ hair._id }}')" class="btn-small red accent-3">Delete <i class="fas fa-trash"></i></a>
-                    <a href="{{ url_for('edit_hairstyle', hair_id=hair._id) }}" class="btn-small green darken-4">Edit <i class="fas fa-edit"></i></a>
+                    <a href="{{ url_for('delete_hairstyle', hair_id=hair._id) }}" onclick="confirmDeletion('{{ hair._id }}')" class="btn-small brown lighten-1 accent-3">Delete <i class="fas fa-trash"></i></a>
+                    <a href="{{ url_for('edit_hairstyle', hair_id=hair._id) }}" class="btn-small brown lighten-3">Edit <i class="fas fa-edit"></i></a>
                   {% endif %}
                   </div>
-                  <div class="card-reveal teal accent-1">
-                    <span class="card-title "><strong>Hair care:</strong><i class="fa-solid fa-xmark right"></i></span>
+                  <div class="card-reveal grey accent-1">
+                    <span class="card-title brown-text text-darken-4 "><strong>Hair care:</strong><i class="fa-solid fa-xmark right"></i></span>
                     <div class="center-align">
                       <br>
                       <img src="{{ url_for('static', filename='avatars/care4plants.png') }}" alt="watering plants icon" width="100" height="100">
-                      <span class="card-title green-text text-darken-4"><strong>{{ hair.common_name }}</strong></span>
-                      <span class="card-title grey-text text-darken-4">How do I keep it alive?</span>
-                      <p class="grey-text text-darken-4">{{ hair.hair_care }}</p>
+                      <span class="card-title brown-text text-darken-1"><strong>{{ hair.common_name }}</strong></span>
+                      <span class="card-title brown-text text-darken-4">How do I keep it alive?</span>
+                      <p class="brown-text text-darken-1">{{ hair.hair_care }}</p>
                       <br>
                       <br>
-                    <p>For some great advice on hair care, why not have a look at these videos we have made for you?</p>
-                    <a href="https://www.youtube.com/results?search_query=houseplants" class="btn-large red accent-3" target="_blank" rel="noopener" aria-label="YouTube link"><i class="fab fa-youtube"></i></a>
+                      <p class="brown-text text-darken-4">For some great advice on hair care, why not have a look at these videos we have made for you?</p>
+                    <a href="https://www.youtube.com/results?search_query=houseplants" class="btn-small red accent-3" target="_blank" rel="noopener" aria-label="YouTube link"><i class="fab fa-youtube"></i></a>
                   </div>
                     </div>
                 </div>
