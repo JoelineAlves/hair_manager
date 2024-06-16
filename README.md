@@ -6,7 +6,7 @@
 ## Introduction
 Welcome to my Milestone Project 3. Happer Camper is a website that allows users to find campsites and share their own opinions of campsites. The site allows users to search for campsite reviews, submit their own reviews, and edit and delete reviews they have created. In addition, the admin account enables the admin user to create, edit and delete reviews and locations. Furthermore, users can submit a message to the site creator via the contact form, which uses the EmailJS API.
 
-View the live project [here.](https://happy-camper.herokuapp.com/ "View the Live game here")
+View the live project [here.](https://flask-hair-manager-project-54736428c656.herokuapp.com/ "View the Live game here")
 
 
 ___
@@ -44,18 +44,17 @@ ___
 
 ### Target Audience
 
-The target audience for Happy Camper is anyone who likes camping and wants to share their experience of a campsite. It is also for people who want to find out what other people think of a campsite. Campsite owners might also use it to discover what visitors think of their site.
+The target audience for Hair Styles is anyone who likes camping and wants to share their experience of a campsite. It is also for people who want to find out what other people think of a campsite. Campsite owners might also use it to discover what visitors think of their site.
 
 ### First Time User Goals
 
 As a first time user, I want to:
 * be able to view the site clearly on any device.
 * be able to easily navigate around the site.
-* be able to search for campsite reviews.
+* be able to search for diferent hair styles.
 * be able to sign up to the site quickly.
-* be able to submit a review of a campsite.
-* know that my reviews are protected from other people editing or deleting them.
-* be able to send the site owner a message.
+* be able to add news hair styles.
+* know that my hair styles are protected, I am the only one can be able to edit or delete them.
 * be able to sign out of my account.
 
 
@@ -64,11 +63,11 @@ As a first time user, I want to:
 As a returning user, I want to 
 * be able to view the site clearly on any device.
 * be able to sign back into my account quickly.
-* be able to search for campsite reviews.
-* be able to view my reviews in one place.
-* be able to edit my own reviews.
-* be able to delete my own reviews.
-* know that my reviews are protected from other people editing or deleting them.
+* be able to search for hair styles.
+* be able to view my hair styles in one place.
+* be able to edit my own hair styles.
+* be able to delete my own hair style.
+* know that my hair styles are protected, I am the only one can be able to edit or delete them.
 * be able to sign out of my account.
 
 
@@ -77,12 +76,12 @@ As a returning user, I want to
 As an administrator of the site, I want to be able to:
 * view the site clearly on any device.
 * sign back into my account quickly.
-* edit all reviews if necessary.
-* delete all reviews if necessary.
-* add new locations categories.
-* edit locations categories.
-* delete locations categories.
-* receive email messages from site users.
+* edit all categories if necessary.
+* delete all categories if necessary.
+* add new categories.
+* edit hair styles.
+* delete hair styles.
+* add new hair styles.
 
 
 ### Colour Scheme
@@ -196,17 +195,15 @@ The website consists of twelve pages that run from a base page:
 
 * Home page
 * Find Campsite page
-* Campsite Review Page
+* Hair Review Page
 * Sign Up page
 * Log in page
-* Contact page
 * Profile page
-* Add a review page
-* Edit a review page
+* Add a hair style page
+* Edit a hair style page
 * Manage Locations page
 * Add a location page
 * Edit a location page
-* 404 error page
 
 
 All users can open the following pages: 
