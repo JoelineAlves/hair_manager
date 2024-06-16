@@ -191,26 +191,25 @@ ___
 
 ### Pages
 
-The website consists of twelve pages that run from a base page:
+The website consists of nine pages that run from a base page:
 
 * Home page
-* Find Campsite page
 * Hair Review Page
 * Sign Up page
 * Log in page
 * Profile page
 * Add a hair style page
 * Edit a hair style page
-* Manage Locations page
-* Add a location page
-* Edit a location page
+* Manage categories page
+* Add category page
+* Edit category page
 
 
 All users can open the following pages: 
 
 #### Home Page
 
-The home page contains a search bar for ease of use, to allow users to begin searching for campsite reviews immediately. It also contains three card panels which convey the main features of the site - to search for a site review, submit a site review and (in future) save their favourite site reviews. It has deliberately been kept minimalistic to enable users to easily navigate the site.
+The home page contains a search bar for ease of use, to allow users to begin searching for hair style immediately. It also contains three card panels which convey the main features of the site - to search for a site review, submit a site review and (in future) save their favourite site reviews. It has deliberately been kept minimalistic to enable users to easily navigate the site.
 
 ![home](/documentation/site_images/home_page.jpg)
 
@@ -225,12 +224,6 @@ The Find Campsite page also contains a search bar, again for ease of use. Site r
 This page enables users to read the full campsite review. It includes the image again and includes the values of the keys - site name, site location, site review, image URL, members only (toggle), date visited and reviewed by. The review panel includes a back button which takes them back to the Find Campsite page, again for ease of navigation around the website, without the need to use the browser's back button.
 
 ![review](/documentation/site_images/review.jpg)
-
-#### Contact Page
-
-Any user can access the contact page and complete the contact form. This was deliberately chosen so that anyone experiencing a problem or with a question could contact the site administration. The form connects to the EmailJS API to enable the form contents to be emailed to the site admin. An auto-response has been set up to reply to the email address on the form to acknowledge the user's query. The auto-response includes the user's name in the message.
-
-![contact](/documentation/site_images/contact.jpg)
 
 #### Sign Up Page
 
@@ -292,12 +285,6 @@ Again, this page contains a very simple form. The user is required to enter a lo
 
 ![add locations](/documentation/site_images/add_location.jpg)
 
-#### 404 Error Page
-
-A custom 404 error page has been included to allow users to navigate back to the home page easily as it contains a link which changes colour when hovered over. This enables users to easily navigate the site and gives immediate user feedback.
-
-![404](/documentation/site_images/404.jpg)
-
 ___
 
 ### Future Features
@@ -351,7 +338,7 @@ ___
 ## 5. Deployment
 ### Heroku
 
-To deploy the Happy Camper website to Heroku the following steps were taken:
+To deploy the Hair Styles website to Heroku the following steps were taken:
 1.	Create a Procfile by using the command echo web: python app.py > Procfile at the terminal prompts. Any extra lines need to be removed from the end of the Procfile.
 2.	Create a requirements.txt file using the command pip3 freeze —local > requirements.txt
 3.	Create then a Heroku account and then log in.
@@ -428,6 +415,7 @@ Photo by Xue Guangjian: https://www.pexels.com/photo/photo-of-pitched-dome-tents
 * My Tutor, Rachel, for the all help and support.
 * My friend Dorivaldo, for the all help and support.
 * Codeanywhere support, to help resolve issues encountered.
+* Heroku support, to help resolve issues encountered.
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
 [Back to top](#table-of-contents)
