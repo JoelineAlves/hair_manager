@@ -352,8 +352,8 @@ To deploy the Hair Styles website to Heroku the following steps were taken:
 | Set Secret Key  | < secret key value >     |
 |  IP | "0.0.0.0"        |
 |  PORT | "5000"        |
-|  MONGO_DB NAME | "happyCamperDB"       |
-|  MONGO_URI |   “mongodb+srv://happycamping: < password >@ @happycamper.h5xj7d4.mongodb.net/happyCamperDB?retryWrites=true&w=majority"      |
+|  MONGO_DB NAME | "hair_manager"       |
+|  MONGO_URI |   “mongodb+srv://joelinealves08:r00tUser@myfirstcluster.necz9fz.mongodb.net/hair_manager?retryWrites=true&w=majority&appName=myFirstCluster"      |
 
 
 
@@ -361,7 +361,7 @@ To deploy the Hair Styles website to Heroku the following steps were taken:
 
 It may be necessary to clone the repository from GitHub to your local computer. Cloning the repository makes a copy of all the of repository data and takes it from GitHub to your local machine. The following steps, detailed below, should be taken to clone a repository:
 
-1.	Navigate to the main page of the repository (in this case https://github.com/EmmaJane22/HappyCamper).
+1.	Navigate to the main page of the repository (in this case https://github.com/JoelineAlves/hair_manager).
 2.	Select the button labelled Code.
 3.	To clone the repo using HTTPS select the "HTTPS" option; to clone using an SSH key select the second option "SSH"; to clone using GitHub CLI select the third "GitHub CLI" option. Use the clipboard icon to copy the relevant information.
 4.	Open Git Bash and change the working directory to the location where you wish the cloned repo to be stored.
@@ -384,10 +384,6 @@ https://www.emailjs.com/docs/user-guide/auto-reply/
 
 * Materializecss
 https://materializecss.com/text-inputs.html
-
-
-* How to create a 404 page:
-https://stackoverflow.com/questions/29516093/how-to-redirect-to-a-external-404-page-python-flask
 
 
 * Code Institute's Task Manager mini-project tutorial
