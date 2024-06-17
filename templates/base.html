@@ -7,6 +7,14 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Email JS -->
+    <script type="text/javascript">
+        const publickey ="5XcVl64q0apaP8G4T";
+        (function() {
+            emailjs.init(publickey);
+        })();
+    </script>
     {% block styles %}
     {% endblock %}
     <title>Hair Manager</title>
@@ -21,6 +29,7 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_hairs') }}">Home</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_hairstyle') }}">New Hairstyle</a></li>
@@ -76,6 +85,8 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+     <!-- EmailJS script -->
+     <script src="/static/js/sendEmail.js"></script>
     {% block scripts %}
     {% endblock %}
 </body>

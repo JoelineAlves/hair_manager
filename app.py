@@ -243,6 +243,12 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/contact")
+def contact():
+    """ renders contact page """
+    return render_template("contact.html")
+
+
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP"),
