@@ -1,3 +1,4 @@
+/* Import Raleway font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
 /* Reset global margins and paddings */
@@ -11,7 +12,7 @@
 html, body {
     height: 100%;
     background-color: rgba(33, 33, 33, 0.85); /* Dark background with transparency */
-    font-family:'Raleway', sans-serif; /* Default font */
+    font-family: 'Raleway', sans-serif; /* Default font */
     display: flex;
     flex-direction: column; /* Make the body a flex container */
 }
@@ -159,7 +160,6 @@ html, body {
 footer li {
     display: inline; /* Footer items in line */
 }
-
 
 
 
