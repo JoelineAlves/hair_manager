@@ -5,158 +5,160 @@
     box-sizing: border-box;
 }
 
-/* Specific adjustments */
-body {
-    background-color: #212121d8;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.85); /* Dark background with transparency */
+    font-family: Arial, sans-serif; /* Default font */
+    display: flex;
+    flex-direction: column; /* Make the body a flex container */
 }
 
-/* Container adjustments */
+/* Make the main content area flexible */
 .container {
-    padding: 0;
-    margin: 0 auto;
+    flex: 1; /* Take up available space */
+    margin: 0 auto; /* Center the container */
     width: 100%;
 }
 
 /* Flexbox layout for rows and columns */
 .row {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0;  /* Remove default margin */
+    flex-wrap: wrap; /* Allow wrapping to new lines */
 }
 
 .col {
-    padding: 10px;  /* Adjust padding to create space between cards */
-    box-sizing: border-box;
+    padding: 10px; /* Inner spacing */
     width: 100%;
 }
 
 @media (min-width: 601px) {
     .col.s12.m6 {
-        width: 50%;
+        width: 50%; /* 2 columns on medium screens */
     }
 }
 
 @media (min-width: 993px) {
     .col.s12.l3 {
-        width: 25%;
+        width: 25%; /* 4 columns on large screens */
     }
 }
 
+/* Card styling */
 .card {
     margin: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Vertical layout */
 }
 
 .card .card-image img {
-    object-fit: cover;
-    height: 200px;  /* Adjust height as needed */
-    width: 100%;
+    object-fit: cover; /* Cover the entire available space */
+    height: 130px; /* Fixed height */
+    width: 100%; /* Full width of the container */
 }
 
 .card-content {
-    padding: 10px;
+    padding: 10px; /* Inner spacing */
 }
 
-/* Adjust button margins */
+/* Button adjustments */
 .btn-small {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px 0; /* Top and bottom margin */
 }
 
 .btn-large i.fab {
-    font-size: 1rem;  /* Reduce the icon size */
+    font-size: 1rem; /* Reduced icon size */
 }
 
+/* Text shadow effect */
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
-
+/* Flash messages */
+.flashes {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    text-align: center; /* Center text within the container */
+}
 
 .flashes h4 {
-    line-height: 2;
-    
+    line-height: 1; /* Compact line height */
 }
 
-/* Title and search adjustments */
-.center-align {
-    text-align: center;
-}
-
+/* Headings and search bar adjustments */
 .headings {
-    margin-bottom: 20px;
-    width: 100%;
+    margin-bottom: 20px; /* Bottom spacing */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center items */
 }
 
 .search-session {
     padding: 20px;
     margin-bottom: 20px;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the search bar */
 }
 
 .input-field {
-    margin-bottom: 0;
+    margin-bottom: 0; /* Remove bottom margin */
 }
 
-/* mobile navbar */
+/* Mobile navbar */
 #mobile-demo {
-    background-color: #000; 
+    background-color: #000; /* Black background */
 }
 
 #mobile-demo a {
-    color: #ffffff; 
+    color: #ffffff; /* White text */
 }
 
+/* Dropdown styling */
 .select-dropdown li span {
-    color: #6d4c41 !important;
+    color: #6d4c41 !important; /* Specific color for dropdown items */
 }
 
-/* Estilo para os botões Clear, Cancel e Select */
+/* Datepicker styling */
 .datepicker-container .datepicker-footer .datepicker-cancel,
 .datepicker-container .datepicker-footer .datepicker-done {
-    color: #6d4c41;
+    color: #6d4c41; /* Color of the buttons in the datepicker footer */
 }
 
-/* Estilo para a parte esquerda do calendário */
 .datepicker-container .datepicker-date-display {
-    background-color: #6d4c41;
-    color: white; /* Altere a cor do texto conforme necessário */
+    background-color: #6d4c41; /* Background of the datepicker display */
+    color: white; /* White text */
 }
 
-/* Estilo para os dias selecionados */
 .datepicker-container .datepicker-table td.is-selected {
-    background-color: #6d4c41;
-    color: white; /* Altere a cor do texto conforme necessário */
+    background-color: #6d4c41; /* Background of selected days */
+    color: white; /* White text */
 }
 
-/* -------- Footer -------- */
-
+/* Footer styling */
 .page-footer {
-    background-color: #3e2723;
+    background-color: #4e342e; /* Footer background color */
+    padding: 5px 15px; /* Tighter padding */
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 .social-media-icon {
-    font-size: 2rem;
-    color: #fafafa;
-    padding: 10px;
+    font-size: 2rem; /* Size of social media icons */
+    color: #fafafa; /* Color of icons */
+    padding: 5px; /* Inner spacing */
 }
 
 .social-media-hover i:hover {
-    color: #fafafa;
+    color: #fafafa; /* Color of icons on hover */
 }
 
 footer li {
-    display: inline;
+    display: inline; /* Footer items in line */
 }
+
+
 
 
 
