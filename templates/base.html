@@ -49,6 +49,7 @@
           <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align white-text">Hair Styles</h4></li>
             <li><a href="{{ url_for('get_hairs') }}">Home</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
         {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('add_hairstyle') }}">New Hairstyle</a></li>
