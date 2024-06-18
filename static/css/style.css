@@ -116,6 +116,51 @@ body {
     color: #ffffff; 
 }
 
+.select-dropdown li span {
+    color: #6d4c41 !important;
+}
+
+/* Estilo para os botões Clear, Cancel e Select */
+.datepicker-container .datepicker-footer .datepicker-cancel,
+.datepicker-container .datepicker-footer .datepicker-done {
+    color: #6d4c41;
+}
+
+/* Estilo para a parte esquerda do calendário */
+.datepicker-container .datepicker-date-display {
+    background-color: #6d4c41;
+    color: white; /* Altere a cor do texto conforme necessário */
+}
+
+/* Estilo para os dias selecionados */
+.datepicker-container .datepicker-table td.is-selected {
+    background-color: #6d4c41;
+    color: white; /* Altere a cor do texto conforme necessário */
+}
+
+/* -------- Footer -------- */
+
+.page-footer {
+    background-color: #3e2723;
+}
+
+.social-media-icon {
+    font-size: 2rem;
+    color: #fafafa;
+    padding: 10px;
+}
+
+.social-media-hover i:hover {
+    color: #fafafa;
+}
+
+footer li {
+    display: inline;
+}
+
+
+
+
 
 
 
