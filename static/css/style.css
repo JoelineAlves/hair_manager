@@ -72,12 +72,35 @@ html, body {
 .center-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre os botões, ajuste conforme necessário */
+    gap: 20px; /* Spacing between buttons, adjust as needed */
+    flex-wrap: wrap; /* Allow buttons to align in multiple lines if necessary */
 }
 
+.btn-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.btn-large i.fab {
-    font-size: 1rem; /* Reduced icon size */
+.btn-large i {
+    margin-left: 10px; /* Spacing between text and icon */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 600px) {
+    .center-buttons {
+        flex-direction: column;
+        gap: 10px; /* Reduce spacing between buttons */
+    }
+
+    .btn-large {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn-large i {
+        margin-left: 5px; /* Reduce spacing between text and icon */
+    }
 }
 
 /* Text shadow effect */
@@ -167,6 +190,7 @@ html, body {
 footer li {
     display: inline; /* Footer items in line */
 }
+
 
 
 
