@@ -212,7 +212,13 @@ The home page contains a search bar for ease of use to allow users to start sear
 
 ![home]()
 
-#### Sign Up Page
+#### Contact Page
+
+Any user can access the contact page and fill out the contact form. This was deliberately chosen so that anyone who has a problem or question can contact the site administration. The form connects to the EmailJS API to allow the form content to be emailed to the site administrator. The modal is triggered to inform the user that the email was sent successfully.
+
+![contact](/documentation/site_images/contact.jpg)
+
+#### Register Page
 
 The Sign Up page comprises of a form for users to complete to create an account. The fields have icons to easily identify each field and to improve the visual effect of the form panel. Users are required to complete each field and are unable to submit the form if fields don't follow a specified format. Users are unable to create a username that already exists as this is checked against the database. Users are prompted 'Username unavailable. Please try a different username.' There is also a link to the Log in page with the prompt 'Already registered?' to avoid multiple accounts being created. The First Name and Last Name fields are listed side by side on larger displays and in blocks on smaller screen sizes to provide ease of accessibility.
 
@@ -229,25 +235,25 @@ Users who are logged in can access the following pages:
 
 #### Profile Page
 
-The profile page displays the hairs styles thats the user has added. The card panels include three buttons: Edit and Delete. The Delete button triggers the modal to confirm whether the user really wants to delete the review. The Edit button takes the user to the  edit hair style page.
+The profile page displays the hairs styles that the user has added. The card panels include two buttons: Edit and Delete. The Delete button triggers the modal to confirm whether the user really wants to delete the review. The Edit button takes the user to the  edit hair style page.
 
 ![profile]()
 
 #### Edit hairstyle Page
 
- 
+This page displays the current revision of the site using the hair_id value to populate the fields with values. Users can then edit the fields and have the option to save the edited hairstyle or cancel and return to the Hairs page. Again, the parameters have been set to the field values, so they are mandatory. 
 
 ![edit hairstyle]()
 
 #### Add hairstyle Page
 
-
+Signed in users can complete the form to submit a new hairstyle. The form includes the keys of category, hair name,  common name, image URL, description, hair care, and added date which is a Materialize date picker for ease of entry and uniformity of values in the database. All values are required except, as previously mentioned. The form can then be submitted and stored in the database, or the Cancel button returns the user to the Hairs page. This all enables ease of navigation and good user experience.
 
 ![add hairstyle]()
 
 #### Log Out Link
 
-When users click on the Log Out link their session ends and they are redirected to the home page. A flash message gives confirmation that they have been logged out successfully.
+When users click on the Log Out link their session ends and they are redirected to the log in page. A flash message gives confirmation that they have been logged out successfully.
 
 ![log out]()
 
@@ -256,19 +262,19 @@ The following pages are only accessible to Admin users:
 
 #### Manage Categories Page
 
-  
+The categories in the database are displayed on Materialize card panels that are responsive based on device size for clear display and good user experience. The card panels contain two buttons: edit and delete. The delete button triggers the modal to confirm the user wants to delete the location. The edit button redirects the user to the edit page. The buttons have been designed to echo the site colours providing brand identity. 
 
 ![manage locations]()
 
 #### Edit Categories Page
 
-
+The edit page contains a very simple form which is prepopulated with the category that the user has selected to edit. Upon clicking the edit category button the user is redirected back to the Manage categories page. A cancel button is also provided if the user changes their mind to avoid them needing to user the browser's back button.
 
 ![edit locations]()
 
 #### Add Categories Page
 
-
+Again, this page contains a very simple form. The user is required to enter a category name that is longer than three letters. Upon clicking the Add category button the user is redirected back to the Manage categories page. Again, the cancel button is also provided if the user changes their mind to avoid them needing to user the browser's back button.
 
 ![add locations]()
 
@@ -277,6 +283,15 @@ ___
 ### Future Features
 Ideas for future implementation include:
 
+Ideas for future implementation include:
+
+Ideas for future implementation include:
+
+- the functionality that allows a user to save a hairstyle as a 'favorite' and have it appear on their profile page.
+- the ability for users to change their passwords and a function to accommodate forgotten passwords.
+- the option for a user to delete their account.
+- the option for a user to choose the language they want on the website.
+- add 404 error page.
 
 
 
@@ -300,11 +315,12 @@ HTML, CSS, JavaScript & Python
 * Jinga - to generate markup as well as source code.
 * Werzberg - for secure password hashing.
 * Balsamiq - to produce wireframes.
-* Git - for version control.
-* Github - to save files for the website.
+* Figma - to produce wireframes.
+* GitHub - to save files for the website.
 * Google Fonts - to import fonts.
-* TinyPNG - to compress files.
-* LucidCharts - to produce the site flow chart.
+* Gitpod - to write code, commit and push the code to the GitHub.
+* codeanywhere - to write code, commit and push the code to the GitHub.
+* Workbench to create the ER diagram.
 
 
 [Back to top](#table-of-contents)
@@ -312,7 +328,7 @@ ___
 
 ## 4. Testing
 
-
+A separate [TEST.md](TEST.md) file has been created for the documentation of testing.
 
 [Back to top](#table-of-contents)
 
@@ -336,7 +352,7 @@ To deploy the Hair Styles website to Heroku the following steps were taken:
 |  IP | "0.0.0.0"        |
 |  PORT | "5000"        |
 |  MONGO_DB NAME | "hair_manager"       |
-|  MONGO_URI |   “mongodb+srv://joelinealves08:r00tUser@myfirstcluster.necz9fz.mongodb.net/hair_manager?retryWrites=true&w=majority&appName=myFirstCluster"      |
+|  MONGO_URI |   “mongodb+srv://joelinealves08:password@myfirstcluster.necz9fz.mongodb.net/hair_manager?retryWrites=true&w=majority&appName=myFirstCluster"      |
 
 
 
