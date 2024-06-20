@@ -397,9 +397,9 @@ Putting it all together > Sending Emails Using EmailJS > Sending Emails!
 
 [websitemockupgenerator](https://websitemockupgenerator.com/) for creating the multi-device mockup.
 
-https://www.shutterstock.com/image-photo/camping-green-tent-forest-near-lake-657542155 tent image
+https://unsplash.com/pt-br cards images
 
-Photo by Xue Guangjian: https://www.pexels.com/photo/photo-of-pitched-dome-tents-overlooking-mountain-ranges-1687845/ hero image
+https://www.istockphoto.com/ cards images
 
 ### Acknowledgements
 
