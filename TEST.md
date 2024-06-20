@@ -159,7 +159,7 @@ ___
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Happy Camper Logo | redirect user to home page when clicked | clicked title | redirected to home page | pass |
+| Hairstyles Logo | redirect user to home page when clicked | clicked title | redirected to home page | pass |
 | Home page link | redirect user to home page when clicked | clicked link | redirected to home page | pass |
 | Find Campsite link | redirect user to find campsite page when clicked | clicked link | redirected to Find Campsite page | pass |
 | contact us link | redirect user to contact page when clicked | clicked link | redirected to contact page | pass |
@@ -241,34 +241,34 @@ ___
 | Add review button | add review to database | clicked add button | review added to database | pass |
 
 
-### Manage Location Page
+### Manage Categories Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Access to page | page should not display unless Admin user logged in | logged in as non-admin user | hyperlink hidden | pass |
-| Add location button | redirect to Add Location page | clicked add button | redirected to Add Location page | pass |
-| Edit button | redirects to edit location id page | clicked button | redirects to correct location id to edit | pass |
+| Add categories button | redirect to Add Categories page | clicked add button | redirected to Add Categorie page | pass |
+| Edit button | redirects to edit categorie id page | clicked button | redirects to correct categorie id to edit | pass |
 | Delete button | redirects to delete modal | clicked button | redirects to delete modal | pass |
 | buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
-### Add Location Page
+### Add Categories Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Access to page | page should not display unless Admin user logged in | logged in as non-admin user | hyperlink hidden | pass |
 | Form input | Should prompt user to enter input if left blank | left input blank and clicked send button | tooltip indicates the field needs completing | pass |
-| cancel button | redirect to Manage Locations page | clicked cancel button | redirected to Manage Locations page | pass |
-| Add location button | add location to database | clicked add button | location added to database | pass |
+| cancel button | redirect to Manage Categories page | clicked cancel button | redirected to Manage Categories page | pass |
+| Add categories button | add categories to database | clicked add button | categories added to database | pass |
 | buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
-### Edit Location Page
+### Edit Categories Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Access to page | page should not display unless Admin user logged in | logged in as non-admin user | hyperlink hidden | pass |
-| Form input | Should be prepopulated correctly for location id | checked prepopulated correctly | Correct location prepopulated | pass |
-| cancel button | redirect to Manage Locations page | clicked cancel button | redirected to Manage Locations page | pass |
-| Edit location button | append location name to database | clicked edit button | location appended to database | pass |
+| Form input | Should be prepopulated correctly for categorie id | checked prepopulated correctly | Correct categorie prepopulated | pass |
+| cancel button | redirect to Manage Categories page | clicked cancel button | redirected to Manage Categories page | pass |
+| Edit categories button | append categories name to database | clicked edit button | categories appended to database | pass |
 | buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
 ### Sign Up Page
