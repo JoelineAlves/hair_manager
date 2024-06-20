@@ -1,4 +1,4 @@
-# Happy Camper Campsite Review Website - Emma Scott
+# Hair Styles Review Website - Joeline Alves
 ## Backend Development Milestone Project
 
 ## Testing
@@ -29,7 +29,7 @@ The validator also highlighted missing head elements, illegal characters, missin
 
 All CSS code was checked with the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) using the 'direct input' method. No errors found.
 
-![W3C CSS image](/documentation/css.jpg)
+![W3C CSS image]()
 
 
 ### JSHint Validator
@@ -45,9 +45,10 @@ It also showed two errors with two variables being used to call functions in sen
 
 ### PEP8 Validation
 
-PEP8Ci was used to validate the python code used in the app.py file. No errors were linted.
+PEP8Ci was used to validate the python code used in the app.py file. Some errors were detected, such as whitespaces, over-indented and blank lines.
+These errors have all been duly corrected.
 
-![PEP8CI image](/documentation/pep8_app_clear.jpg)
+![PEP8CI image]()
 
 
 ## Lighthouse
@@ -56,10 +57,10 @@ Responsivity tests were carried out using Google Chrome DevTools throughout the 
 The site has been run through the Lighthouse test on Google Developer Tools and achieved the following results:
 
 Desktop - Home Page <br>
-![desktop home](/documentation/index.jpg)
+![desktop home]()
 
 Mobile - Home Page <br>
-![mobile home](/documentation/mobile_index.jpg)
+![mobile home]()
 
 The first test showed that there wasn't sufficient contrast between the text colour and the background colour so this was changed to the darker colour of #263238.
 
@@ -93,16 +94,16 @@ As a first time user, I want to:
     - testers reported that the site was responsive on their devices.
 * be able to easily navigate around the site.
     - Friends and family reported that the site was easy to navigate around.
-* be able to search for campsite reviews.
+* be able to search for hairstyles.
     - All users can access the search tool regardless of whether they have an account. 
 * be able to sign up to the site quickly.
     - testers reported that they found signing up easy and quick.
-* be able to submit a review of a campsite.
-    - all testers reported being able to submit a review easily.
-* know that my reviews are protected from other people editing or deleting them.
-    - testing showed that reviews could not be deleted by different users.
+* be able to add and edit a hairstyles.
+    - all testers reported being able to add and edit a hairstyle easily.
+* know that my hairstyles are protected from other people editing or deleting them.
+    - testing showed that hairstyles could not be deleted by different users.
 * be able to send the site owner a message.
-    - the contact form sends emails and the user received the auto-reply email back.
+    - the contact form sends emails and the user received modal with the message that the email was successfully sent.
 * be able to sign out of my account.
     - testers confirmed they could sign out.
 
@@ -114,16 +115,18 @@ As a returning user, I want to
     - testers reported that the site was responsive on their devices.
 * be able to sign back into my account quickly.
     - all users confirmed they could sign back in quickly. Some users suggested the ability to reset their password, which would be implemented in future.
-* be able to search for campsite reviews.
-    - all testers were able to search for campsites based on their key words.
-* be able to view my reviews in one place.
+* be able to search for hairstyles.
+    - all testers were able to search for hairstyles based on their key words.
+* be able to view my hairstyles in one place.
     - the profile page was accurate for all testers.
-* be able to edit my own reviews.
-    - testers confirmed they could edit their reviews successfully.
-* be able to delete my own reviews.
-    - testers confirmed they could delete their own reviews and not those from others.
-* know that my reviews are protected from other people editing or deleting them.
-    - testers confirmed their reviews had not been deleted by others.
+* be able to add my own hairstyles.
+    - testers confirmed they could add their hairstyles successfully.
+* be able to edit my own hairstyles.
+    - testers confirmed they could edit their hairstyles successfully.
+* be able to delete my own hairstyles.
+    - testers confirmed they could delete their own hairstyles and not those from others.
+* know that my hairstyles are protected from other people editing or deleting them.
+    - testers confirmed their hairstyles had not been deleted by others.
 * be able to sign out of my account.
     - Testers confirmed they could sign out successfully.
 
@@ -135,16 +138,16 @@ As an administrator of the site, I want to be able to:
     - testers reported that the site was responsive on their devices.
 * sign back into my account quickly.
     - admin testers confirmed they could sign back in quickly.
-* edit all reviews if necessary.
-    - admin testers confirmed they could edit reviews.
-* delete all reviews if necessary.
-    - admin testers confirmed they could delete all reviews individually.
-* add new locations categories.
-    - admin testers confirmed they could add new locations.
-* edit locations categories.
-    - admin testers confirmed they could edit locations.
-* delete locations categories.
-    - admin testers confirmed they could delete reviews.
+* edit all hairstyle categories if necessary.
+    - admin testers confirmed they could edit hairstyle categories.
+* delete all hairstyle categories if necessary.
+    - admin testers confirmed they could delete all hairstyle categories individually.
+* add new  hairstyle categories.
+    - admin testers confirmed they could add new hairstyle categories.
+* edit  hairstyle categories.
+    - admin testers confirmed they could edit hairstyle categories.
+* delete hairsstyle categories.
+    - admin testers confirmed they could delete hairstyle categories.
 * receive email messages from site users.
     - admin testers confirmed they could receive messages via the form.
 
