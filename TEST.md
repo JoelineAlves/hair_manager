@@ -271,7 +271,7 @@ ___
 | Edit categories button | append categories name to database | clicked edit button | categories appended to database | pass |
 | buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
-### Sign Up Page
+### Register Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
@@ -280,7 +280,7 @@ ___
 | Form input - username & password | The field should be between 5-15 characters long  | enter more than 5 characters | tooltip indicates the field is invalid | pass |
 | Form input | Should prompt user to enter input if left blank | left input blank and clicked send button | tooltip indicates the field needs completing | pass |
 | Invalid username | Error message should display if username is already registered  | user pre-registered username | error message appeared | pass |
-| Sign Up button | add user to database | clicked Sign Up button | user added to database | pass |
+| Register button | add user to database | clicked Register button | user added to database | pass |
 | Logn In hyperlink | redirect user to Log In page | clicked hyperlink | redirected to Log In page | pass |
 | buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
@@ -310,13 +310,6 @@ ___
 | delete location | location should be deleted from database | clicked delete | location deleted from database | pass |
 | cancel button | redirect to Manage Locations page | clicked cancel button | redirected to Manage Locations page | pass |
 
-### 404 Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| display page | page should display when an error is made with site url | removed character from site url | 404 page displayed | pass |
-| home hyperlink | redirect user to Home page | clicked hyperlink | redirected to Home page | pass |
-| hyperlink | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
 
 ___
