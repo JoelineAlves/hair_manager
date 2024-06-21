@@ -1,7 +1,7 @@
 # Hair Styles Website - Joeline Alves
 ## Backend Development Milestone Project
 
-![mockup image](/documentation/mockup.jpg)
+![mockup image](/documentation/mockup.png)
 
 ## Introduction
 Welcome to my Milestone Project 3. Hair Styles is a website that allows users to find different types of hair styles, from extensions, braids to different hair textures. The site allows users to search for hair styles, add their own hair styles, and edit and delete hair styles they have created. Furthermore, the admin account allows the admin user to create, edit and delete the different categories of hair styles. Additionally, users can send a message to the website creator via the contact form, which uses the EmailJS API.
@@ -90,7 +90,7 @@ As an administrator of the site, I want to be able to:
 
 [Coolors](https://coolors.co) was used to create a calming colour scheme that would not distract from the content.
 
-![colour chart]()
+![colour chart](/documentation/colour_page.jpg)
 
 
 ### Typography
@@ -111,7 +111,7 @@ Database
 
 The tables for the data have been created on MongoDB which is a non-relational database.
 
-![flow chart]()
+![ER diagram](/documentation/diagram_er.png)
 
 ### Wireframes
 
@@ -136,7 +136,7 @@ New Hairstyle page
 
 Profile Dashboard
 
-![profile page](/)
+![profile page]()
 
 Manage Categories page
 
@@ -148,29 +148,29 @@ Manage Categories page
 The nav bar is displayed on all pages and allows users to easily navigate the site. The nav bar has a brand name on the left to increase brand identity throughout the site. The brand name links back to the main page for ease of navigation. The links change colour when hovered over to signal to the user which hyperlink they have the mouse over. 
 The nav bar presents differently for different user. Unregistered/Logged out users will only be able to see links for 'Home', 'Contact Us', 'Log in', 'Log In' and 'Register'. 
 
-![nav logged out]()
+![nav logged out](/documentation/logout_navbar.png)
 
 Once logged in, users will also see nav links for 'New Hairstyle', 'Profile' and will no longer see 'Log In' or 'Register' links.
 
-![nav logged in]()
+![nav logged in](/documentation/user_navbar.png)
 
 Admin users can also see a link for 'Manage Categories' once logged in. 
 
-![nav admin logged in]()
+![nav admin logged in](/documentation/admin_navbar.png)
 
 The nav bar is responsive and resizes when viewed on mobile devices as a side nav bar rather than a top one.
 
 Logged out
 
-![side nav logged out]()
+![side nav logged out](/documentation/mobile_logoutNav.png)
 
 Logged in
 
-![side nav logged in]()
+![side nav logged in](/documentation/mobile_userNav.png)
 
 Admin
 
-![side nav admin]()
+![side nav admin](/documentation/mobile_adminNav.png)
 
 #### Cards area
 
@@ -210,25 +210,25 @@ All users can open the following pages:
 
 The home page contains a search bar for ease of use to allow users to start searching for hairstyles right away. It also contains twenty cards that contain the different hairstyles with different content - name of the respective hairstyle, common name, a brief description, how to care, and even features a link to a video with more details. It has been deliberately kept minimalist to allow users to easily navigate the site.
 
-![home]()
+![home](/documentation/homepage_web.png)
 
 #### Contact Page
 
 Any user can access the contact page and fill out the contact form. This was deliberately chosen so that anyone who has a problem or question can contact the site administration. The form connects to the EmailJS API to allow the form content to be emailed to the site administrator. The modal is triggered to inform the user that the email was sent successfully.
 
-![contact](/documentation/site_images/contact.jpg)
+![contact](/documentation/contact_web.png)
 
 #### Register Page
 
 The Sign Up page comprises of a form for users to complete to create an account. The fields have icons to easily identify each field and to improve the visual effect of the form panel. Users are required to complete each field and are unable to submit the form if fields don't follow a specified format. Users are unable to create a username that already exists as this is checked against the database. Users are prompted 'Username unavailable. Please try a different username.' There is also a link to the Log in page with the prompt 'Already registered?' to avoid multiple accounts being created. The First Name and Last Name fields are listed side by side on larger displays and in blocks on smaller screen sizes to provide ease of accessibility.
 
-![sign up]()
+![sign up](/documentation/register_web.png)
 
 #### Log In Page
 
 The Log In page again is a simple form that requires both fields to be completed. This is then checked against the database and the user is then redirected to their profile page if the account matches the database, or if it does not match then a flash message is displayed that the username or password is invalid. This wording was deliberately chosen to increase security as the user will be unsure which field is incorrect thus making it harder to hack.
 
-![login]()
+![login](/documentation/login_web.png)
 
 
 Users who are logged in can access the following pages:
@@ -237,25 +237,25 @@ Users who are logged in can access the following pages:
 
 The profile page displays the hairs styles that the user has added. The card panels include two buttons: Edit and Delete. The Delete button triggers the modal to confirm whether the user really wants to delete the review. The Edit button takes the user to the  edit hair style page.
 
-![profile]()
+![profile](/documentation/profile_web.png)
 
 #### Edit hairstyle Page
 
 This page displays the current revision of the site using the hair_id value to populate the fields with values. Users can then edit the fields and have the option to save the edited hairstyle or cancel and return to the Hairs page. Again, the parameters have been set to the field values, so they are mandatory. 
 
-![edit hairstyle]()
+![edit hairstyle](/documentation/edithair_web.png)
 
 #### Add hairstyle Page
 
 Signed in users can complete the form to submit a new hairstyle. The form includes the keys of category, hair name,  common name, image URL, description, hair care, and added date which is a Materialize date picker for ease of entry and uniformity of values in the database. All values are required except, as previously mentioned. The form can then be submitted and stored in the database, or the Cancel button returns the user to the Hairs page. This all enables ease of navigation and good user experience.
 
-![add hairstyle]()
+![add hairstyle](/documentation/addhair_web.png)
 
 #### Log Out Link
 
 When users click on the Log Out link their session ends and they are redirected to the log in page. A flash message gives confirmation that they have been logged out successfully.
 
-![log out]()
+![log out](/documentation/logout_web.png)
 
 
 The following pages are only accessible to Admin users:
@@ -264,19 +264,19 @@ The following pages are only accessible to Admin users:
 
 The categories in the database are displayed on Materialize card panels that are responsive based on device size for clear display and good user experience. The card panels contain two buttons: edit and delete. The delete button triggers the modal to confirm the user wants to delete the location. The edit button redirects the user to the edit page. The buttons have been designed to echo the site colours providing brand identity. 
 
-![manage locations]()
+![manage categories](/documentation/manageCategorie_web.png)
 
 #### Edit Categories Page
 
 The edit page contains a very simple form which is prepopulated with the category that the user has selected to edit. Upon clicking the edit category button the user is redirected back to the Manage categories page. A cancel button is also provided if the user changes their mind to avoid them needing to user the browser's back button.
 
-![edit locations]()
+![edit categories](/documentation/editcategorie_web.png)
 
 #### Add Categories Page
 
 Again, this page contains a very simple form. The user is required to enter a category name that is longer than three letters. Upon clicking the Add category button the user is redirected back to the Manage categories page. Again, the cancel button is also provided if the user changes their mind to avoid them needing to user the browser's back button.
 
-![add locations]()
+![add categorie](/documentation/addcategorie_web.png)
 
 ___
 
