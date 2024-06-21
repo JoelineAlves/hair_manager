@@ -1,4 +1,4 @@
-// sendmail() function
+// sendMail() function
 // code taken from emailjs tutorial
 
 function sendMail(contactForm) {
