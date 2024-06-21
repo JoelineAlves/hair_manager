@@ -299,13 +299,12 @@ ___
 | --- | --- | --- | --- | --- |
 | Form input | Should prompt user to enter input if left blank | left input blank and clicked send button | tooltip indicates the field needs completing | pass |
 | Send button | Should send the form to the admin email account | completed form and clicked send button, checked admin mailbox | Email received containing information from form | pass |
-| auto-reply email | User completing the form should receive the auto-reply email | users checked their mailbox | Auto-reply had been received. | pass |
 
 ### Delete Modal
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| delete review | review should be deleted from database | clicked delete | review deleted from database | pass |
+| delete hairstyles | hairstyle should be deleted from database | clicked delete | hairstyles deleted from database | pass |
 | cancel button | redirect to Find a Campsite page | clicked cancel button | redirected to Find a campsite page | pass |
 | delete location | location should be deleted from database | clicked delete | location deleted from database | pass |
 | cancel button | redirect to Manage Locations page | clicked cancel button | redirected to Manage Locations page | pass |

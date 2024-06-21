@@ -184,7 +184,7 @@ The footer contains social media links which could direct to Hair Styles social 
 Flash messages appear to provide the user with feedback on actions for example to confirm if a hair style has been added or deleted and to confirm when users have logged in or logged out. The style of the messages is similar to the rest of the site to provide good user experience.
 
 #### Modals
-Modals have been used on pages that involve the ability to delete something, for example on Manage Categories. The button on the page triggers the modal to open, and the delete functionality only works through the delete button on the modal. This is to reduce instances where people accidentally delete something and provides better user experience.
+Modals have been used on pages that involve the ability to delete something, for example on Manage Categories. The button on the page triggers the modal to open, and the delete functionality only works through the delete button on the modal. This is to reduce instances where people accidentally delete something and provides better user experience. Modals are also used to inform users that the form filled out on the contact page was successfully submitted.
 
 ___
 
