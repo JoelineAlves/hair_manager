@@ -11,69 +11,58 @@
 /* Ensure html and body take full height */
 html, body {
     height: 100%;
-    background-color: rgba(33, 33, 33, 0.85); /* Dark background with transparency */
-    font-family: 'Raleway', sans-serif; /* Default font */
+    background-color: rgba(33, 33, 33, 0.85); 
+    font-family: 'Raleway', sans-serif; 
     display: flex;
-    flex-direction: column; /* Make the body a flex container */
+    flex-direction: column; 
 }
 
 /* Make the main content area flexible */
 .container {
-    flex: 1; /* Take up available space */
-    margin: 0 auto; /* Center the container */
+    flex: 1; 
+    margin: 0 auto; 
     width: 100%;
 }
 
 /* Flexbox layout for rows and columns */
 .row {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping to new lines */
+    flex-wrap: wrap; 
 }
 
 .col {
-    padding: 10px; /* Inner spacing */
+    padding: 10px; 
     width: 100%;
 }
 
-@media (min-width: 601px) {
-    .col.s12.m6 {
-        width: 50%; /* 2 columns on medium screens */
-    }
-}
-
-@media (min-width: 993px) {
-    .col.s12.l3 {
-        width: 25%; /* 4 columns on large screens */
-    }
-}
 
 /* Card styling */
 .card {
     margin: 10px;
     display: flex;
-    flex-direction: column; /* Vertical layout */
+    flex-direction: column; 
 }
 
 .card .card-image img {
-    object-fit: cover; /* Cover the entire available space */
-    height: 130px; /* Fixed height */
-    width: 100%; /* Full width of the container */
+    object-fit: cover; 
+    height: 130px; 
+    width: 100%; 
 }
 
 .card-content {
-    padding: 10px; /* Inner spacing */
+    padding: 10px; 
 }
 
 /* Button adjustments */
 .btn-small {
-    margin: 5px 0; /* Top and bottom margin */
+    margin: 5px 0; 
 }
 
 .center-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Spacing between buttons, adjust as needed */
-    flex-wrap: wrap; /* Allow buttons to align in multiple lines if necessary */
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
 .btn-large {
@@ -83,14 +72,26 @@ html, body {
 }
 
 .btn-large i {
-    margin-left: 10px; /* Spacing between text and icon */
+    margin-left: 10px; 
 }
 
 /* Adjustments for small screens */
+@media (min-width: 601px) {
+    .col.s12.m6 {
+        width: 50%; 
+    }
+}
+
+@media (min-width: 993px) {
+    .col.s12.l3 {
+        width: 25%; 
+    }
+}
+
 @media (max-width: 600px) {
     .center-buttons {
         flex-direction: column;
-        gap: 10px; /* Reduce spacing between buttons */
+        gap: 10px; 
     }
 
     .btn-large {
@@ -99,96 +100,96 @@ html, body {
     }
 
     .btn-large i {
-        margin-left: 5px; /* Reduce spacing between text and icon */
+        margin-left: 5px; 
     }
 }
 
 /* Text shadow effect */
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
 }
 
 /* Flash messages */
 .flashes {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
-    text-align: center; /* Center text within the container */
+    text-align: center; 
 }
 
 .flashes h4 {
-    line-height: 1; /* Compact line height */
+    line-height: 1; 
 }
 
 /* Headings and search bar adjustments */
 .headings {
-    margin-bottom: 20px; /* Bottom spacing */
+    margin-bottom: 20px; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items */
+    align-items: center; 
 }
 
 .search-session {
     padding: 20px;
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; /* Center the search bar */
+    justify-content: center; 
 }
 
 .input-field {
-    margin-bottom: 0; /* Remove bottom margin */
+    margin-bottom: 0; 
 }
 
 /* Mobile navbar */
 #mobile-demo {
-    background-color: #000; /* Black background */
+    background-color: #000; 
 }
 
 #mobile-demo a {
-    color: #ffffff; /* White text */
+    color: #ffffff; 
 }
 
 /* Dropdown styling */
 .select-dropdown li span {
-    color: #6d4c41 !important; /* Specific color for dropdown items */
+    color: #6d4c41 !important; 
 }
 
 /* Datepicker styling */
 .datepicker-container .datepicker-footer .datepicker-cancel,
 .datepicker-container .datepicker-footer .datepicker-done {
-    color: #6d4c41; /* Color of the buttons in the datepicker footer */
+    color: #6d4c41; 
 }
 
 .datepicker-container .datepicker-date-display {
-    background-color: #6d4c41; /* Background of the datepicker display */
-    color: white; /* White text */
+    background-color: #6d4c41; 
+    color: white; 
 }
 
 .datepicker-container .datepicker-table td.is-selected {
-    background-color: #6d4c41; /* Background of selected days */
-    color: white; /* White text */
+    background-color: #6d4c41; 
+    color: white; 
 }
 
 /* Footer styling */
 .page-footer {
-    background-color: #4e342e; /* Footer background color */
-    padding: 5px 15px; /* Tighter padding */
-    margin-top: auto; /* Push footer to the bottom */
+    background-color: #4e342e; 
+    padding: 5px 15px; 
+    margin-top: auto; 
 }
 
 .social-media-icon {
-    font-size: 2rem; /* Size of social media icons */
-    color: #fafafa; /* Color of icons */
-    padding: 5px; /* Inner spacing */
+    font-size: 2rem; 
+    color: #fafafa; 
+    padding: 5px; 
 }
 
 .social-media-hover i:hover {
-    color: #fafafa; /* Color of icons on hover */
+    color: #fafafa; 
 }
 
 footer li {
-    display: inline; /* Footer items in line */
+    display: inline; 
 }
 
 

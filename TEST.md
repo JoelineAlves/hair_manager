@@ -16,7 +16,7 @@
 ### W3C Markup Validator
 
 All .html files were checked with the [W3C HTML Validator](https://validator.w3.org/) using the 'direct input' method.
-These checks showed three pages with a missing closing div tag where I had copied and pasted the same snippet of code. This was fixed by moving the closing div tag from after the endif to the end of each card div.
+These checks showed no errors and some warnings.
 
 ![W3C image](/documentation/profile_div.jpg)
 
