@@ -16,31 +16,31 @@
 ### W3C Markup Validator
 
 All .html files were checked with the [W3C HTML Validator](https://validator.w3.org/) using the 'direct input' method.
-These checks showed no errors and some warnings.
+These checks showed no errors and few warnings.
 
-![W3C image](/documentation/profile_div.jpg)
+![W3C image](/documentation_TEST/html_validator.png)
 
 The validator also highlighted missing head elements, illegal characters, missing lang attributes and no-space characters however these are due to use Jinga templating (see example below).
 
-![W3C HTML image](/documentation/index_error.jpg)
+![W3C HTML image](/documentation_TEST/html_validator.png)
 
 
 ### CSS Validator
 
-All CSS code was checked with the [W3C CSS Validator]() using the 'direct input' method. No errors found.
+All CSS code was checked with the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) using the 'direct input' method. No errors found.
 
-![W3C CSS image]()
+![W3C CSS image](/documentation_TEST/cssvalidator.png)
 
 
 ### JSHint Validator
 
-This showed two warnings linked to the Materialize script on script.js
+The script.js was checked with the [JS Hint](https://jshint.com/). No errors found. 
 
-![jshint error image](/documentation/jshint_error.jpg)
+![jshint image](/documentation_TEST/js_validator.png)
 
-It also showed two errors with two variables being used to call functions in sendEmail.js
+Also the sendEmail.js was checked. 
 
-![jshint email error image](/documentation/sendEmail_error.jpg)
+![jshint email image](/documentation_TEST/sendemails_validator.png)
 
 
 ### PEP8 Validation
@@ -48,7 +48,7 @@ It also showed two errors with two variables being used to call functions in sen
 PEP8Ci was used to validate the python code used in the app.py file. Some errors were detected, such as whitespaces, over-indented and blank lines.
 These errors have all been duly corrected.
 
-![PEP8CI image]()
+![PEP8CI image](/documentation_TEST/python_validator.png)
 
 
 ## Lighthouse
@@ -57,7 +57,7 @@ Responsivity tests were carried out using Google Chrome DevTools throughout the 
 The site has been run through the Lighthouse test on Google Developer Tools and achieved the following results:
 
 Home Page <br>
-![desktop home]()
+![lighthouse](/documentation_TEST/lighthouse_web.png)
 
 
 ___
