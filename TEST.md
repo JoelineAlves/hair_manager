@@ -56,17 +56,8 @@ These errors have all been duly corrected.
 Responsivity tests were carried out using Google Chrome DevTools throughout the project.
 The site has been run through the Lighthouse test on Google Developer Tools and achieved the following results:
 
-Desktop - Home Page <br>
+Home Page <br>
 ![desktop home]()
-
-Mobile - Home Page <br>
-![mobile home]()
-
-The first test showed that there wasn't sufficient contrast between the text colour and the background colour so this was changed to the darker colour of #263238.
-
-It also identified that the footer text was also not high enough contrast so the styling on that was increased to a h6 so that it was more legible.
-
-Performance on some pages was lower than hoped which seemed to be affected by the external URLs for the site reviews.
 
 
 ___

@@ -115,7 +115,7 @@ The tables for the data have been created on MongoDB which is a non-relational d
 
 ### Wireframes
 
-[Balsamiq](https://balsamiq.com/) was used to create wireframes of the design of the site for mobile phones, tablets and desktop devices.
+[Figma](https://figma.com/) was used to create wireframes of the design of the site for mobile phones, tablets and desktop devices.
 
 Home Page
 
@@ -172,7 +172,7 @@ Admin
 
 ![side nav admin]()
 
-#### Hero Image
+#### Cards area
 
 When accessing the website, the different cards with images of different hairstyles attract attention and immediately convey the context of the website. I decided to only display them on the home page to allow a larger window for forms and analytics on subsequent pages to provide a better user experience.
 
@@ -283,11 +283,8 @@ ___
 ### Future Features
 Ideas for future implementation include:
 
-Ideas for future implementation include:
-
-Ideas for future implementation include:
-
 - the functionality that allows a user to save a hairstyle as a 'favorite' and have it appear on their profile page.
+- the functionality that user received the auto-reply email back.
 - the ability for users to change their passwords and a function to accommodate forgotten passwords.
 - the option for a user to delete their account.
 - the option for a user to choose the language they want on the website.
@@ -307,6 +304,7 @@ HTML, CSS, JavaScript & Python
 ### Frameworks, Libraries and Programs Used
 
 * MongoDB Atlas - database server, noSQL.
+* Heroku - to deploy the project.
 * Flask - micro web framework written in Python.
 * mongoDB shell - command shell.
 * dnspython - DNS toolkit for Python.
@@ -317,7 +315,9 @@ HTML, CSS, JavaScript & Python
 * Balsamiq - to produce wireframes.
 * Figma - to produce wireframes.
 * GitHub - to save files for the website.
+* jQuery - for javascrip fuctionality.
 * Google Fonts - to import fonts.
+* Font Awesome - to icons on the pages.
 * Gitpod - to write code, commit and push the code to the GitHub.
 * codeanywhere - to write code, commit and push the code to the GitHub.
 * Workbench to create the ER diagram.
