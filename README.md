@@ -1,4 +1,4 @@
-# Hair Styles Review Website - Joeline Alves
+# Hair Styles Website - Joeline Alves
 ## Backend Development Milestone Project
 
 ![mockup image](/documentation/mockup.jpg)

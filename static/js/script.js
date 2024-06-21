@@ -10,6 +10,7 @@ $(document).ready(function(){
         }
     });
 
+    // custom validation taken from Code Institute Mini Project tutorial
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };

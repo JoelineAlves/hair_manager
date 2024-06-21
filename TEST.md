@@ -1,4 +1,4 @@
-# Hair Styles Review Website - Joeline Alves
+# Hair Styles Website - Joeline Alves
 ## Backend Development Milestone Project
 
 ## Testing
@@ -27,7 +27,7 @@ The validator also highlighted missing head elements, illegal characters, missin
 
 ### CSS Validator
 
-All CSS code was checked with the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) using the 'direct input' method. No errors found.
+All CSS code was checked with the [W3C CSS Validator]() using the 'direct input' method. No errors found.
 
 ![W3C CSS image]()
 
@@ -161,84 +161,55 @@ ___
 | --- | --- | --- | --- | --- |
 | Hairstyles Logo | redirect user to home page when clicked | clicked title | redirected to home page | pass |
 | Home page link | redirect user to home page when clicked | clicked link | redirected to home page | pass |
-| Find Campsite link | redirect user to find campsite page when clicked | clicked link | redirected to Find Campsite page | pass |
 | contact us link | redirect user to contact page when clicked | clicked link | redirected to contact page | pass |
 | log in link | redirect user to log in page when clicked | clicked link | redirected to log in page | pass |
 | sign up link | redirect user to sign up page when clicked | clicked link | redirected to sign up page | pass |
 | log out link | log user out of session and redirect user to home page when clicked | clicked link | user logged out of session and redirected to home page | pass |
 | profile link | redirect user to profile page when clicked | clicked link | redirected to profile page | pass |
-| Add Review link | redirect user to add review page when clicked | clicked link | redirected to add review page | pass |
-| manage locations link | redirect user to manage locations page when clicked | clicked link | redirected to manage locations page | pass |
+| New Hairstyle link | redirect user to add hairstyle page when clicked | clicked link | redirected to add hairstyle page | pass |
+| manage Categories link | redirect user to manage categories page when clicked | clicked link | redirected to manage categories page | pass |
 
 ### Footer
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Social media links | link open browser window and go to correct site when clicked | clicked link | New browser window opens for each link clicked. Links redirect tot he correct sites. | pass |
+| Social media links | link open browser window and go to correct site when clicked | clicked link | New browser window opens for each link clicked. Links redirect to the correct sites. | pass |
 
-### Hero Image
+### Cards area
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Hero image | Hero image resizes on mobile devices | opened site on mobile device | hero image resizes as expected | pass |
+| Cards area | Cards area resizes on mobile devices | opened site on mobile device | Cards area resizes as expected | pass |
 
 
 ### Home Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Search bar | search is performed when user enters a search term. | searched for woodland, chocolate, space, superhero, tent | The search returned sites containing the search term. | pass |
-| Search bar | Message appears to inform user there are no search results when search is performed without a matching search term. | searched for woodland, chocolate, space, superhero, tent | The search returned the error message. | pass |
+| Search bar | search is performed when user enters a search term. | searched for clip-in, braids, wigs, micro | The search returned cards containing the search term. | pass |
+| Search bar | Message appears to inform user there are no search results when search is performed without a matching search term. | searched for cookie, chocolate, dori, abna, git | The search returned the error message. | pass |
 | search button | Performs search when button is clicked. | clicked button | Search successfully performed | pass |
-| links for search | redirect to Find a campsite page | clicked link | redirected to Find a campsite page | pass |
-| links for submit | redirect to Add Review page | clicked link | redirected to Add Review page | pass |
-| links for search, submit & save | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
-
-### Find Campsite Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Search bar | search is performed when user enters a search term. | searched for woodland, chocolate, space, superhero, tent | The search returned sites containing the search term. | pass |
-| Search bar | Message appears to inform user there are no search results when search is performed without a matching search term. | searched for woodland, chocolate, space, superhero, tent | The search returned the error message. | pass |
-| search button | Performs search when button is clicked. | clicked button | Search successfully performed | pass |
-| Image | displayed from url | visited page | image displayed | pass |
-| Image | displayed from static if missing url | visited page | image displayed | pass |
-| View button | redirects to site id review | clicked button | redirects to correct site id review | pass |
-| Edit button | redirects to edit site id review | clicked button | redirects to correct site id review to edit | pass |
-| Delete button | redirects to delete modal | clicked button | redirects to delete modal | pass |
 
 ### Profile Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Users site reviews | Profile page displays all of the user's reviews | clicked on Profile hyperlink on Nav Bar | redirected to Profile page, review cards displayed  | pass |
+| Users site hairstyles | Profile page displays all of the user's hairstyles | clicked on Profile hyperlink on Nav Bar | redirected to Profile page, hairstyles cards displayed  | pass |
 | Username  | Username displays in title  | logged in and went to Profile page | Username displayed in title | pass |
-| View button | redirects to site id review | clicked button | redirects to correct site id review | pass |
-| Edit button | redirects to edit site id review | clicked button | redirects to correct site id review to edit | pass |
+| Edit button | redirects to edit card id hairstyle | clicked button | redirects to correct card id hairstyle to edit | pass |
 | Delete button | redirects to delete modal | clicked button | redirects to delete modal | pass |
 
 
-### View Review Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Image | displayed from url | visited page | image displayed | pass |
-| Edit button | redirects to edit site id page | clicked button | redirects to correct site id to edit | pass |
-| Delete button | redirects to delete modal | clicked button | redirects to delete modal | pass |
-| buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
-
-### Add Review Page
+### Add hairstyle Page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Access to page | page should not display unless user is logged in | stayed logged out | hyperlink hidden | pass |
 | Form input | Should prompt user to enter input if left blank | left input blank and clicked send button | tooltip indicates the field needs completing | pass |
-| Location input | dropdown list should appear | clicked dropdown carrat | location drop down appeared | pass |
+| Category input | dropdown list should appear | clicked dropdown icon | category drop down appeared | pass |
 | Date input | Should open date picker | clicked on input field | datepicker appeared | pass |
-| Members only toggle | toggle switch should be able to set to on or off | clicked toggle | toggle switch can be turned on and off | pass |
-| cancel button | redirect to Find Campsite page | clicked cancel button | redirected to Find Campsite page | pass |
-| Add review button | add review to database | clicked add button | review added to database | pass |
+| Add hairstyle button | add hairstyle to database | clicked add button | hairstyle added to database | pass |
 
 
 ### Manage Categories Page
@@ -249,7 +220,6 @@ ___
 | Add categories button | redirect to Add Categories page | clicked add button | redirected to Add Categorie page | pass |
 | Edit button | redirects to edit categorie id page | clicked button | redirects to correct categorie id to edit | pass |
 | Delete button | redirects to delete modal | clicked button | redirects to delete modal | pass |
-| buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
 ### Add Categories Page
 
@@ -259,7 +229,6 @@ ___
 | Form input | Should prompt user to enter input if left blank | left input blank and clicked send button | tooltip indicates the field needs completing | pass |
 | cancel button | redirect to Manage Categories page | clicked cancel button | redirected to Manage Categories page | pass |
 | Add categories button | add categories to database | clicked add button | categories added to database | pass |
-| buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
 ### Edit Categories Page
 
@@ -269,7 +238,7 @@ ___
 | Form input | Should be prepopulated correctly for categorie id | checked prepopulated correctly | Correct categorie prepopulated | pass |
 | cancel button | redirect to Manage Categories page | clicked cancel button | redirected to Manage Categories page | pass |
 | Edit categories button | append categories name to database | clicked edit button | categories appended to database | pass |
-| buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
+
 
 ### Register Page
 
@@ -282,7 +251,7 @@ ___
 | Invalid username | Error message should display if username is already registered  | user pre-registered username | error message appeared | pass |
 | Register button | add user to database | clicked Register button | user added to database | pass |
 | Logn In hyperlink | redirect user to Log In page | clicked hyperlink | redirected to Log In page | pass |
-| buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
+
 
 ### Log In Page
 
@@ -291,7 +260,6 @@ ___
 | Form input | Should prompt user to enter input if left blank | left input blank and clicked send button | tooltip indicates the field needs completing | pass |
 | Log In button | add user to session and redirects to Profile page. Flash message to welcome user | clicked Login button | user redirected to Profile page. Flash welcome message displayed | pass |
 | Sign Up hyperlink | redirect user to Sign Up page | clicked hyperlink | redirected to Sign Up page | pass |
-| buttons | hyperlink hover changes colour | hovered over link | link changed colour | pass |
 
 ### Contact Us Page
 
@@ -305,9 +273,7 @@ ___
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | delete hairstyles | hairstyle should be deleted from database | clicked delete | hairstyles deleted from database | pass |
-| cancel button | redirect to Find a Campsite page | clicked cancel button | redirected to Find a campsite page | pass |
-| delete location | location should be deleted from database | clicked delete | location deleted from database | pass |
-| cancel button | redirect to Manage Locations page | clicked cancel button | redirected to Manage Locations page | pass |
+| delete categories | categories should be deleted from database | clicked delete | categories deleted from database | pass |
 
 
 
@@ -319,10 +285,10 @@ ___
 | :--- | :--- |
 | Werzberg error showed Log out link not working  | On inspection the redirect in app.py was set to login rather than landing_page. Changed the redirect address. |
 | Contact form wasn’t sending email |  Wrong setting saved for service, changed to correct service id. |
-| Linting error for app.py - PEP8 warning: Missing two blank lines | Added additional blank lines. |
-| Within manage locations html, when you click on delete modal, it does not delete the selected location. | By using Dev Tools inspect and running the site in debug mode, I realised that all the modals had the same ID. This meant that when delete was pressed, regardless of which location was selected, the first location in the database was being deleted as the wrong modal was being displayed, which meant the delete link in that modal had the wrong location ID. On closer inspection the same was happening with the site modal. To resolve this, I appended the location id/site id onto the modal element id. |
-| Edit review page displaying missing image icon in top left corner. | URL field was missing forward slash, added that. |
-| Review page not displaying static image | Added an if statement to display static image if missing image url |
+| Linting error for app.py - PEP8 warning: too many blank lines | deleted blank lines. |
+| Linting error for app.py - PEP8 warning: trailing whitespace | deleted whitespace. |
+| Linting error for app.py - PEP8 warning: no newline at end of file | Added additional blank lines. |
+| Linting error for app.py - PEP8 warning: blank line contains whitespace | deleted whitespace. |
 | Delete app route not working | Added the missing @ in app route |
 | Not redirecting to Login page when I tried to log in as an unregistered user | Change app route to return redirect(url_for("login")) |
 
