@@ -20,10 +20,6 @@ These checks showed no errors and few warnings.
 
 ![W3C image](/documentation_TEST/html_validator.png)
 
-The validator also highlighted missing head elements, illegal characters, missing lang attributes and no-space characters however these are due to use Jinga templating (see example below).
-
-![W3C HTML image](/documentation_TEST/html_validator.png)
-
 
 ### CSS Validator
 
