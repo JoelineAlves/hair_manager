@@ -119,11 +119,11 @@ The tables for the data have been created on MongoDB which is a non-relational d
 
 Home Page
 
-![homepage]()
+![homepage](/documentation/homewireframe_web.jpeg)
 
 Register page
 
-![sign up page]()
+![sign up page](/documentation/registerwireframe_web.jpeg)
 
 Log in page
 
@@ -249,7 +249,7 @@ This page displays the current revision of the site using the hair_id value to p
 
 Signed in users can complete the form to submit a new hairstyle. The form includes the keys of category, hair name,  common name, image URL, description, hair care, and added date which is a Materialize date picker for ease of entry and uniformity of values in the database. All values are required except, as previously mentioned. The form can then be submitted and stored in the database, or the Cancel button returns the user to the Hairs page. This all enables ease of navigation and good user experience.
 
-![add hairstyle](/documentation/addhair_web.png)
+![add hairstyle](/documentation/addHairstyle_web.png)
 
 #### Log Out Link
 
