@@ -125,6 +125,7 @@ Web
 Mobile
 ![homepage](/documentation/homewireframe_mobile.jpeg)
 
+___
 
 Register page
 
@@ -134,6 +135,7 @@ Web
 Mobile
 ![sign up page](/documentation/registerwiregrame_mobile.png)
 
+___
 
 Log in page
 
@@ -143,6 +145,7 @@ Web
 Mobile
 ![log in page](/documentation/registerwiregrame_mobile.png)
 
+___
 
 Profile Dashboard
 
@@ -152,15 +155,17 @@ Web
 Mobile
 ![profile page](/documentation/profilewireframe_mobile.png)
 
+___
 
 Add New hairstyle page
 
 Web
-![add hairstyle](/documentation)
+![add hairstyle](/documentation/addHairwire_web.png)
 
 Mobile
-![add hairstyle](/documentation)
+![add hairstyle](/documentation/addHairwire_mobile.png)
 
+___
 
 Manage Categories page
 
