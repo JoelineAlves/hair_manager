@@ -243,7 +243,7 @@ The profile page displays the hairs styles that the user has added. The card pan
 
 This page displays the current revision of the site using the hair_id value to populate the fields with values. Users can then edit the fields and have the option to save the edited hairstyle or cancel and return to the Hairs page. Again, the parameters have been set to the field values, so they are mandatory. 
 
-![edit hairstyle](/documentation/edithair_web.png)
+![edit hairstyle](/documentation/edithair_page.png)
 
 #### Add hairstyle Page
 
