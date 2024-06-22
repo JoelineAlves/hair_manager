@@ -115,7 +115,7 @@ The tables for the data have been created on MongoDB which is a non-relational d
 
 ### Wireframes
 
-[Figma](https://figma.com/) was used to create wireframes of the design of the site for mobile phones, tablets and desktop devices.
+[Figma](https://figma.com/) was used to create wireframes of the design of the site for desktop and mobile devices.
 
 Home Page
 
@@ -135,10 +135,6 @@ Log in page
 
 ![log in page](/documentation/loginwireframe_web.jpeg)
 
-
-New Hairstyle page
-
-![add hairstyle page](/documentation/)
 
 Profile Dashboard
 
