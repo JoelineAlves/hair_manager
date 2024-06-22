@@ -121,29 +121,52 @@ Home Page
 
 Web
 ![homepage](/documentation/homewireframe_web.jpeg)
+
 Mobile
 ![homepage](/documentation/homewireframe_mobile.jpeg)
+
 
 Register page
 
 Web
 ![sign up page](/documentation/registerwireframe_web.jpeg)
+
 Mobile
-![sign up page](/documentation)
+![sign up page](/documentation/registerwiregrame_mobile.png)
+
 
 Log in page
 
+Web
 ![log in page](/documentation/loginwireframe_web.jpeg)
+
+Mobile
+![log in page](/documentation/registerwiregrame_mobile.png)
 
 
 Profile Dashboard
 
+Web
 ![profile page](/documentation/profilewireframe_web.jpeg)
+
+Mobile
+![profile page](/documentation/profilewireframe_mobile.png)
+
+
+Add New hairstyle page
+
+Web
+![add hairstyle](/documentation)
+
+Mobile
+![add hairstyle](/documentation)
+
 
 Manage Categories page
 
 Web
 ![manage categories](/documentation/profilewireframe_web.jpeg)
+
 Mobile
 ![manage categories](/documentation/managewireframe_mobile.jpeg)
 
