@@ -105,7 +105,7 @@ ___
 
 Site Map 
 
-![site map]()
+![site map](/documentation/mapSite.jpg)
 
 Database
 
@@ -119,28 +119,37 @@ The tables for the data have been created on MongoDB which is a non-relational d
 
 Home Page
 
+Web
 ![homepage](/documentation/homewireframe_web.jpeg)
+Mobile
+![homepage](/documentation/homewireframe_mobile.jpeg)
 
 Register page
 
+Web
 ![sign up page](/documentation/registerwireframe_web.jpeg)
+Mobile
+![sign up page](/documentation)
 
 Log in page
 
-![log in page]()
+![log in page](/documentation/loginwireframe_web.jpeg)
 
 
 New Hairstyle page
 
-![add hairstyle page]()
+![add hairstyle page](/documentation/)
 
 Profile Dashboard
 
-![profile page]()
+![profile page](/documentation/profilewireframe_web.jpeg)
 
 Manage Categories page
 
-![manage categories]()
+Web
+![manage categories](/documentation/profilewireframe_web.jpeg)
+Mobile
+![manage categories](/documentation/managewireframe_mobile.jpeg)
 
 ### Features
 
