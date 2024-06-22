@@ -170,10 +170,11 @@ ___
 Manage Categories page
 
 Web
-![manage categories](/documentation/profilewireframe_web.jpeg)
+![manage categories](/documentation/managewireframe_web.jpeg)
 
 Mobile
 ![manage categories](/documentation/managewireframe_mobile.jpeg)
+
 
 ### Features
 
