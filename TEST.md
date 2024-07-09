@@ -18,25 +18,25 @@
 All .html files were checked with the [W3C HTML Validator](https://validator.w3.org/) using the 'direct input' method.
 These checks showed no errors and few warnings.
 
-![W3C image](/documentation_TEST/html_validator.png)
+![W3C image](/documentation_test/html_validator.png)
 
 
 ### CSS Validator
 
 All CSS code was checked with the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) using the 'direct input' method. No errors found.
 
-![W3C CSS image](/documentation_TEST/cssvalidator.png)
+![W3C CSS image](/documentation_test/cssvalidator.png)
 
 
 ### JSHint Validator
 
 The script.js was checked with the [JS Hint](https://jshint.com/). No errors found. 
 
-![jshint image](/documentation_TEST/js_validator.png)
+![jshint image](/documentation_test/js_validator.png)
 
 Also the sendEmail.js was checked. 
 
-![jshint email image](/documentation_TEST/sendemails_validator.png)
+![jshint email image](/documentation_test/sendemails_validator.png)
 
 
 ### PEP8 Validation
@@ -44,7 +44,7 @@ Also the sendEmail.js was checked.
 PEP8Ci was used to validate the python code used in the app.py file. Some errors were detected, such as whitespaces, over-indented and blank lines.
 These errors have all been duly corrected.
 
-![PEP8CI image](/documentation_TEST/python_validator.png)
+![PEP8CI image](/documentation_test/python_validator.png)
 
 
 ## Lighthouse
@@ -53,7 +53,7 @@ Responsivity tests were carried out using Google Chrome DevTools throughout the 
 The site has been run through the Lighthouse test on Google Developer Tools and achieved the following results:
 
 Home Page <br>
-![lighthouse](/documentation_TEST/lighthouse_web.png)
+![lighthouse](/documentation_test/lighthouse_web.png)
 
 
 ___

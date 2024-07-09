@@ -105,7 +105,7 @@ ___
 
 Site Map 
 
-![site map](/documentation/mapSite.jpg)
+![site map](/documentation/mapsite.jpg)
 
 Database
 
@@ -160,10 +160,10 @@ ___
 Add New hairstyle page
 
 Web
-![add hairstyle](/documentation/addHairwire_web.png)
+![add hairstyle](/documentation/addhairwire_web.png)
 
 Mobile
-![add hairstyle](/documentation/addHairwire_mobile.png)
+![add hairstyle](/documentation/addhairwire_mobile.png)
 
 ___
 
@@ -196,15 +196,15 @@ The nav bar is responsive and resizes when viewed on mobile devices as a side na
 
 Logged out
 
-![side nav logged out](/documentation/mobile_logoutNav.png)
+![side nav logged out](/documentation/mobile_logoutnav.png)
 
 Logged in
 
-![side nav logged in](/documentation/mobile_userNav.png)
+![side nav logged in](/documentation/mobile_usernav.png)
 
 Admin
 
-![side nav admin](/documentation/mobile_adminNav.png)
+![side nav admin](/documentation/mobile_adminnav.png)
 
 #### Cards area
 
@@ -283,7 +283,7 @@ This page displays the current revision of the site using the hair_id value to p
 
 Signed in users can complete the form to submit a new hairstyle. The form includes the keys of category, hair name,  common name, image URL, description, hair care, and added date which is a Materialize date picker for ease of entry and uniformity of values in the database. All values are required except, as previously mentioned. The form can then be submitted and stored in the database, or the Cancel button returns the user to the Hairs page. This all enables ease of navigation and good user experience.
 
-![add hairstyle](/documentation/addHairstyle_web.png)
+![add hairstyle](/documentation/addhairstyle_web.png)
 
 #### Log Out Link
 
@@ -298,7 +298,7 @@ The following pages are only accessible to Admin users:
 
 The categories in the database are displayed on Materialize card panels that are responsive based on device size for clear display and good user experience. The card panels contain two buttons: edit and delete. The delete button triggers the modal to confirm the user wants to delete the location. The edit button redirects the user to the edit page. The buttons have been designed to echo the site colours providing brand identity. 
 
-![manage categories](/documentation/manageCategorie_web.png)
+![manage categories](/documentation/managecategorie_web.png)
 
 #### Edit Categories Page
 
