@@ -46,6 +46,10 @@ These errors have all been duly corrected.
 
 ![PEP8CI image](/documentation_test/python_validator.png)
 
+After some corrections.
+
+![PEP8CI image](/documentation_test/right_validator.png)
+
 
 ## Lighthouse
 
